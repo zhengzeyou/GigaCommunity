@@ -7,13 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		57B5C7035FD68D0E7498586F /* Pods_GigaCmt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C653A030AD64F228C16FE9E /* Pods_GigaCmt.framework */; };
+		BF821A04494D3E24A5DD583A /* Pods_GigaCmtUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7A9B1F4F54AA5F93C07D0D0 /* Pods_GigaCmtUITests.framework */; };
+		CE611E8EC2D49AC200EFBE73 /* Pods_GigaCmtTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F06BB438EE0309CF3BC75474 /* Pods_GigaCmtTests.framework */; };
 		D54D3CA221426B86001F6FD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54D3CA121426B86001F6FD6 /* AppDelegate.swift */; };
-		D54D3CA421426B86001F6FD6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54D3CA321426B86001F6FD6 /* ViewController.swift */; };
 		D54D3CA721426B86001F6FD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D54D3CA521426B86001F6FD6 /* Main.storyboard */; };
 		D54D3CA921426B87001F6FD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D54D3CA821426B87001F6FD6 /* Assets.xcassets */; };
 		D54D3CAC21426B87001F6FD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D54D3CAA21426B87001F6FD6 /* LaunchScreen.storyboard */; };
 		D54D3CB721426B88001F6FD6 /* GigaCmtTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54D3CB621426B88001F6FD6 /* GigaCmtTests.swift */; };
 		D54D3CC221426B88001F6FD6 /* GigaCmtUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54D3CC121426B88001F6FD6 /* GigaCmtUITests.swift */; };
+		D54D3CD121426E86001F6FD6 /* CMTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54D3CD021426E86001F6FD6 /* CMTabBarController.swift */; };
+		D54D3CD321427264001F6FD6 /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54D3CD221427264001F6FD6 /* BaseController.swift */; };
+		D54D3CD5214272CF001F6FD6 /* CMCommunityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54D3CD4214272CF001F6FD6 /* CMCommunityController.swift */; };
+		D54D3CD721427316001F6FD6 /* CMForumController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54D3CD621427316001F6FD6 /* CMForumController.swift */; };
+		D54D3CD921427352001F6FD6 /* CMReferRoomController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54D3CD821427352001F6FD6 /* CMReferRoomController.swift */; };
+		D54D3CDB2142736D001F6FD6 /* CMDatabaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54D3CDA2142736D001F6FD6 /* CMDatabaseController.swift */; };
+		D54D3CDD21427383001F6FD6 /* CMMyPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54D3CDC21427383001F6FD6 /* CMMyPageController.swift */; };
+		D54D3CE021427A2C001F6FD6 /* CMLoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54D3CDF21427A2C001F6FD6 /* CMLoginController.swift */; };
+		D54D3CE22143617B001F6FD6 /* CMAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54D3CE12143617B001F6FD6 /* CMAccount.swift */; };
+		D54D3CE521437114001F6FD6 /* MoyaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54D3CE421437114001F6FD6 /* MoyaManager.swift */; };
+		D54D3CE72143ADFD001F6FD6 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54D3CE62143ADFD001F6FD6 /* Constant.swift */; };
+		D54D3CF02143C147001F6FD6 /* CMToolExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54D3CEF2143C147001F6FD6 /* CMToolExtension.swift */; };
+		D54D3CF22143C1BD001F6FD6 /* ToModelExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54D3CF12143C1BD001F6FD6 /* ToModelExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +49,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		14742BA08C34B5E81BCFFA52 /* Pods-GigaCmtTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GigaCmtTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GigaCmtTests/Pods-GigaCmtTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2E10218EB6660CCA184AB35A /* Pods-GigaCmtUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GigaCmtUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GigaCmtUITests/Pods-GigaCmtUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		3130D239934CC7E053398132 /* Pods-GigaCmt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GigaCmt.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GigaCmt/Pods-GigaCmt.debug.xcconfig"; sourceTree = "<group>"; };
+		4BB3810CF9C596B034F3F890 /* Pods-GigaCmtTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GigaCmtTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GigaCmtTests/Pods-GigaCmtTests.release.xcconfig"; sourceTree = "<group>"; };
+		6C653A030AD64F228C16FE9E /* Pods_GigaCmt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GigaCmt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7A9B1F4F54AA5F93C07D0D0 /* Pods_GigaCmtUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GigaCmtUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC20755469AC480AE2AFD261 /* Pods-GigaCmtUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GigaCmtUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GigaCmtUITests/Pods-GigaCmtUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D54D3C9E21426B86001F6FD6 /* GigaCmt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GigaCmt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D54D3CA121426B86001F6FD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D54D3CA321426B86001F6FD6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D54D3CA621426B86001F6FD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D54D3CA821426B87001F6FD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D54D3CAB21426B87001F6FD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +68,21 @@
 		D54D3CBD21426B88001F6FD6 /* GigaCmtUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GigaCmtUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D54D3CC121426B88001F6FD6 /* GigaCmtUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GigaCmtUITests.swift; sourceTree = "<group>"; };
 		D54D3CC321426B88001F6FD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D54D3CD021426E86001F6FD6 /* CMTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMTabBarController.swift; sourceTree = "<group>"; };
+		D54D3CD221427264001F6FD6 /* BaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
+		D54D3CD4214272CF001F6FD6 /* CMCommunityController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMCommunityController.swift; sourceTree = "<group>"; };
+		D54D3CD621427316001F6FD6 /* CMForumController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMForumController.swift; sourceTree = "<group>"; };
+		D54D3CD821427352001F6FD6 /* CMReferRoomController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMReferRoomController.swift; sourceTree = "<group>"; };
+		D54D3CDA2142736D001F6FD6 /* CMDatabaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMDatabaseController.swift; sourceTree = "<group>"; };
+		D54D3CDC21427383001F6FD6 /* CMMyPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMMyPageController.swift; sourceTree = "<group>"; };
+		D54D3CDF21427A2C001F6FD6 /* CMLoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMLoginController.swift; sourceTree = "<group>"; };
+		D54D3CE12143617B001F6FD6 /* CMAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMAccount.swift; sourceTree = "<group>"; };
+		D54D3CE421437114001F6FD6 /* MoyaManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaManager.swift; sourceTree = "<group>"; };
+		D54D3CE62143ADFD001F6FD6 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		D54D3CEF2143C147001F6FD6 /* CMToolExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMToolExtension.swift; sourceTree = "<group>"; };
+		D54D3CF12143C1BD001F6FD6 /* ToModelExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToModelExtensions.swift; sourceTree = "<group>"; };
+		D921FD04E858E2EA45EA833F /* Pods-GigaCmt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GigaCmt.release.xcconfig"; path = "Pods/Target Support Files/Pods-GigaCmt/Pods-GigaCmt.release.xcconfig"; sourceTree = "<group>"; };
+		F06BB438EE0309CF3BC75474 /* Pods_GigaCmtTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GigaCmtTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57B5C7035FD68D0E7498586F /* Pods_GigaCmt.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE611E8EC2D49AC200EFBE73 /* Pods_GigaCmtTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +106,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF821A04494D3E24A5DD583A /* Pods_GigaCmtUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		092B58960578E7C24A3DA575 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3130D239934CC7E053398132 /* Pods-GigaCmt.debug.xcconfig */,
+				D921FD04E858E2EA45EA833F /* Pods-GigaCmt.release.xcconfig */,
+				14742BA08C34B5E81BCFFA52 /* Pods-GigaCmtTests.debug.xcconfig */,
+				4BB3810CF9C596B034F3F890 /* Pods-GigaCmtTests.release.xcconfig */,
+				2E10218EB6660CCA184AB35A /* Pods-GigaCmtUITests.debug.xcconfig */,
+				BC20755469AC480AE2AFD261 /* Pods-GigaCmtUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		644C4F4E76F70B6505B44338 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6C653A030AD64F228C16FE9E /* Pods_GigaCmt.framework */,
+				F06BB438EE0309CF3BC75474 /* Pods_GigaCmtTests.framework */,
+				B7A9B1F4F54AA5F93C07D0D0 /* Pods_GigaCmtUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D54D3C9521426B86001F6FD6 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +143,8 @@
 				D54D3CB521426B88001F6FD6 /* GigaCmtTests */,
 				D54D3CC021426B88001F6FD6 /* GigaCmtUITests */,
 				D54D3C9F21426B86001F6FD6 /* Products */,
+				092B58960578E7C24A3DA575 /* Pods */,
+				644C4F4E76F70B6505B44338 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,8 +161,16 @@
 		D54D3CA021426B86001F6FD6 /* GigaCmt */ = {
 			isa = PBXGroup;
 			children = (
+				D54D3CE82143B0A4001F6FD6 /* Extension */,
+				D54D3CE3214370E6001F6FD6 /* NetWork */,
+				D54D3CCF21426E40001F6FD6 /* Base */,
+				D54D3CDE214279EA001F6FD6 /* Logins */,
 				D54D3CA121426B86001F6FD6 /* AppDelegate.swift */,
-				D54D3CA321426B86001F6FD6 /* ViewController.swift */,
+				D54D3CD4214272CF001F6FD6 /* CMCommunityController.swift */,
+				D54D3CD621427316001F6FD6 /* CMForumController.swift */,
+				D54D3CD821427352001F6FD6 /* CMReferRoomController.swift */,
+				D54D3CDA2142736D001F6FD6 /* CMDatabaseController.swift */,
+				D54D3CDC21427383001F6FD6 /* CMMyPageController.swift */,
 				D54D3CA521426B86001F6FD6 /* Main.storyboard */,
 				D54D3CA821426B87001F6FD6 /* Assets.xcassets */,
 				D54D3CAA21426B87001F6FD6 /* LaunchScreen.storyboard */,
@@ -125,6 +197,42 @@
 			path = GigaCmtUITests;
 			sourceTree = "<group>";
 		};
+		D54D3CCF21426E40001F6FD6 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				D54D3CD021426E86001F6FD6 /* CMTabBarController.swift */,
+				D54D3CD221427264001F6FD6 /* BaseController.swift */,
+				D54D3CE12143617B001F6FD6 /* CMAccount.swift */,
+				D54D3CE62143ADFD001F6FD6 /* Constant.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		D54D3CDE214279EA001F6FD6 /* Logins */ = {
+			isa = PBXGroup;
+			children = (
+				D54D3CDF21427A2C001F6FD6 /* CMLoginController.swift */,
+			);
+			path = Logins;
+			sourceTree = "<group>";
+		};
+		D54D3CE3214370E6001F6FD6 /* NetWork */ = {
+			isa = PBXGroup;
+			children = (
+				D54D3CF12143C1BD001F6FD6 /* ToModelExtensions.swift */,
+				D54D3CE421437114001F6FD6 /* MoyaManager.swift */,
+			);
+			path = NetWork;
+			sourceTree = "<group>";
+		};
+		D54D3CE82143B0A4001F6FD6 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D54D3CEF2143C147001F6FD6 /* CMToolExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +240,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D54D3CC621426B88001F6FD6 /* Build configuration list for PBXNativeTarget "GigaCmt" */;
 			buildPhases = (
+				4F7CDC70F33E201285A4FA3D /* [CP] Check Pods Manifest.lock */,
 				D54D3C9A21426B86001F6FD6 /* Sources */,
 				D54D3C9B21426B86001F6FD6 /* Frameworks */,
 				D54D3C9C21426B86001F6FD6 /* Resources */,
+				2F01C850FED74A38326423B2 /* [CP] Embed Pods Frameworks */,
+				07A962EF3EA44E3094279A6B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +260,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D54D3CC921426B88001F6FD6 /* Build configuration list for PBXNativeTarget "GigaCmtTests" */;
 			buildPhases = (
+				5943750219E955C64522A7DB /* [CP] Check Pods Manifest.lock */,
 				D54D3CAE21426B88001F6FD6 /* Sources */,
 				D54D3CAF21426B88001F6FD6 /* Frameworks */,
 				D54D3CB021426B88001F6FD6 /* Resources */,
+				4EA672B573194A6E0A12BA50 /* [CP] Embed Pods Frameworks */,
+				37CAAC77E7F3B6C09E19BA4A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +281,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D54D3CCC21426B88001F6FD6 /* Build configuration list for PBXNativeTarget "GigaCmtUITests" */;
 			buildPhases = (
+				6E5A8F47445937158AA2E6E7 /* [CP] Check Pods Manifest.lock */,
 				D54D3CB921426B88001F6FD6 /* Sources */,
 				D54D3CBA21426B88001F6FD6 /* Frameworks */,
 				D54D3CBB21426B88001F6FD6 /* Resources */,
+				DFA8E0E56489B6FFA4809E3D /* [CP] Embed Pods Frameworks */,
+				1E5FF489CD7020D7997B40FF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -251,13 +368,189 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		07A962EF3EA44E3094279A6B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GigaCmt/Pods-GigaCmt-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1E5FF489CD7020D7997B40FF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GigaCmtUITests/Pods-GigaCmtUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2F01C850FED74A38326423B2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GigaCmt/Pods-GigaCmt-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GigaCmt/Pods-GigaCmt-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		37CAAC77E7F3B6C09E19BA4A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GigaCmtTests/Pods-GigaCmtTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4EA672B573194A6E0A12BA50 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GigaCmtTests/Pods-GigaCmtTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4F7CDC70F33E201285A4FA3D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GigaCmt-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5943750219E955C64522A7DB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GigaCmtTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6E5A8F47445937158AA2E6E7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GigaCmtUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DFA8E0E56489B6FFA4809E3D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GigaCmtUITests/Pods-GigaCmtUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D54D3C9A21426B86001F6FD6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D54D3CA421426B86001F6FD6 /* ViewController.swift in Sources */,
+				D54D3CD121426E86001F6FD6 /* CMTabBarController.swift in Sources */,
+				D54D3CE22143617B001F6FD6 /* CMAccount.swift in Sources */,
+				D54D3CDB2142736D001F6FD6 /* CMDatabaseController.swift in Sources */,
+				D54D3CDD21427383001F6FD6 /* CMMyPageController.swift in Sources */,
+				D54D3CD921427352001F6FD6 /* CMReferRoomController.swift in Sources */,
+				D54D3CE021427A2C001F6FD6 /* CMLoginController.swift in Sources */,
+				D54D3CD721427316001F6FD6 /* CMForumController.swift in Sources */,
+				D54D3CE521437114001F6FD6 /* MoyaManager.swift in Sources */,
+				D54D3CD321427264001F6FD6 /* BaseController.swift in Sources */,
+				D54D3CF22143C1BD001F6FD6 /* ToModelExtensions.swift in Sources */,
 				D54D3CA221426B86001F6FD6 /* AppDelegate.swift in Sources */,
+				D54D3CF02143C147001F6FD6 /* CMToolExtension.swift in Sources */,
+				D54D3CD5214272CF001F6FD6 /* CMCommunityController.swift in Sources */,
+				D54D3CE72143ADFD001F6FD6 /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,15 +721,14 @@
 		};
 		D54D3CC721426B88001F6FD6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3130D239934CC7E053398132 /* Pods-GigaCmt.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RY4WY3W6MH;
 				INFOPLIST_FILE = GigaCmt/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kr.co.gigait.GigaCmt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -446,15 +738,14 @@
 		};
 		D54D3CC821426B88001F6FD6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D921FD04E858E2EA45EA833F /* Pods-GigaCmt.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RY4WY3W6MH;
 				INFOPLIST_FILE = GigaCmt/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kr.co.gigait.GigaCmt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -464,17 +755,14 @@
 		};
 		D54D3CCA21426B88001F6FD6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14742BA08C34B5E81BCFFA52 /* Pods-GigaCmtTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RY4WY3W6MH;
 				INFOPLIST_FILE = GigaCmtTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kr.co.gigait.GigaCmtTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -485,17 +773,14 @@
 		};
 		D54D3CCB21426B88001F6FD6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4BB3810CF9C596B034F3F890 /* Pods-GigaCmtTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RY4WY3W6MH;
 				INFOPLIST_FILE = GigaCmtTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kr.co.gigait.GigaCmtTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -506,16 +791,13 @@
 		};
 		D54D3CCD21426B88001F6FD6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E10218EB6660CCA184AB35A /* Pods-GigaCmtUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RY4WY3W6MH;
 				INFOPLIST_FILE = GigaCmtUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kr.co.gigait.GigaCmtUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -526,16 +808,13 @@
 		};
 		D54D3CCE21426B88001F6FD6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC20755469AC480AE2AFD261 /* Pods-GigaCmtUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RY4WY3W6MH;
 				INFOPLIST_FILE = GigaCmtUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kr.co.gigait.GigaCmtUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
