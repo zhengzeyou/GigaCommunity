@@ -14,9 +14,8 @@ class CMAccount: NSObject {
 	var password:String = ""
 	var nick:String = ""
 	
-	
 	static let instance: CMAccount = CMAccount()
-	class func sharedCMAccount() -> CMAccount {
+ 	class func sharedCMAccount() -> CMAccount {
 		return instance
 	}
 	

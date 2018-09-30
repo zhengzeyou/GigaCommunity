@@ -9,6 +9,8 @@
 import UIKit
 import RxSwift
 
+
+
 extension UIColor {
 	
 	static func rgba(r: CGFloat, g: CGFloat, b: CGFloat,a: CGFloat) -> UIColor {
@@ -37,6 +39,13 @@ extension String {
 		
 		return rect.size
 	}
+	
+
+	public func localized() ->String{
+		
+		return NSLocalizedString(self, comment: "Localizable")
+	}
+
 	
 }
 
@@ -164,4 +173,17 @@ extension UIView {
 		}
 		
 	}
-}
+	
+	public func viewForController(view:UIView)->UIViewController?{
+		var next:UIView? = view
+		repeat{
+			if let nextResponder = next?.next, nextResponder is UIViewController {
+				return (nextResponder as! UIViewController)
+			}
+			next = next?.superview
+		}while next != nil
+		return nil
+	}
+
+	
+ }

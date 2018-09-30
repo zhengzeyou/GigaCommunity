@@ -29,6 +29,41 @@
 		D54D3CE72143ADFD001F6FD6 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54D3CE62143ADFD001F6FD6 /* Constant.swift */; };
 		D54D3CF02143C147001F6FD6 /* CMToolExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54D3CEF2143C147001F6FD6 /* CMToolExtension.swift */; };
 		D54D3CF22143C1BD001F6FD6 /* ToModelExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54D3CF12143C1BD001F6FD6 /* ToModelExtensions.swift */; };
+		D5C9CEB62146170B0028D40E /* CMTopSegView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C9CEB52146170B0028D40E /* CMTopSegView.swift */; };
+		D5C9CEB821465DDF0028D40E /* CMJmTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C9CEB721465DDF0028D40E /* CMJmTableView.swift */; };
+		D5C9CEBA21465DFC0028D40E /* CMPerTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C9CEB921465DFC0028D40E /* CMPerTableView.swift */; };
+		D5C9CEBD21466E4E0028D40E /* CMmunityStarViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C9CEBC21466E4E0028D40E /* CMmunityStarViewCell.swift */; };
+		D5C9CEBF21474D1A0028D40E /* CMmunityStarColCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C9CEBE21474D1A0028D40E /* CMmunityStarColCell.swift */; };
+		D5C9CEC121475BA40028D40E /* CMmunityMonViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C9CEC021475BA40028D40E /* CMmunityMonViewCell.swift */; };
+		D5C9CEC321475C6B0028D40E /* CMmunityMonColCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C9CEC221475C6B0028D40E /* CMmunityMonColCell.swift */; };
+		D5C9CEC521475F060028D40E /* CMmunityMonSecViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C9CEC421475F060028D40E /* CMmunityMonSecViewCell.swift */; };
+		D5C9CEC72147929F0028D40E /* CMmunityMonStarViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C9CEC62147929F0028D40E /* CMmunityMonStarViewCell.swift */; };
+		D5C9CECA21479F820028D40E /* CMReferRoomMainTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C9CEC921479F820028D40E /* CMReferRoomMainTable.swift */; };
+		D5C9CECC2147A2960028D40E /* CMReferRoomHeadSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C9CECB2147A2960028D40E /* CMReferRoomHeadSectionView.swift */; };
+		D5C9CECE2147C6730028D40E /* CMReferRoomFileTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C9CECD2147C6730028D40E /* CMReferRoomFileTableCell.swift */; };
+		D5C9CED02148A1520028D40E /* CMReferRoomUploadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C9CECF2148A1520028D40E /* CMReferRoomUploadView.swift */; };
+		D5C9CED22148B6320028D40E /* CMReferRoomNewFileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C9CED12148B6320028D40E /* CMReferRoomNewFileView.swift */; };
+		D5C9CEF52149F7D20028D40E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D5C9CEF72149F7D20028D40E /* InfoPlist.strings */; };
+		D5C9CEFC2149FDE20028D40E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D5C9CEFE2149FDE20028D40E /* Localizable.strings */; };
+		D5C9CF03214B4DE10028D40E /* CMBasedataSegHeadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C9CF02214B4DE10028D40E /* CMBasedataSegHeadView.swift */; };
+		D5C9CF05214B5C560028D40E /* CMBasedataCollectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C9CF04214B5C560028D40E /* CMBasedataCollectView.swift */; };
+		D5C9CF08214CAA970028D40E /* CMMypageMainTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C9CF07214CAA970028D40E /* CMMypageMainTable.swift */; };
+		D5C9CF0A214CDB570028D40E /* CMMypageMainTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C9CF09214CDB570028D40E /* CMMypageMainTableCell.swift */; };
+		D5C9CF0C214CE5290028D40E /* CMMypageReleaseButtomColCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C9CF0B214CE5290028D40E /* CMMypageReleaseButtomColCell.swift */; };
+		D5C9CF0E214CF8E40028D40E /* CMPersonalSettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C9CF0D214CF8E40028D40E /* CMPersonalSettingController.swift */; };
+		D5C9CF10214F35D80028D40E /* CMMypageReleaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C9CF0F214F35D80028D40E /* CMMypageReleaseController.swift */; };
+		D5C9CF16214F81A50028D40E /* CMMypageReleaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C9CF15214F81A40028D40E /* CMMypageReleaseTableViewCell.swift */; };
+		D5C9CF18214F98730028D40E /* CMMypageRestButtomColCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C9CF17214F98730028D40E /* CMMypageRestButtomColCell.swift */; };
+		D5C9CF1A214F98B80028D40E /* CMMypageAddressListButtomColCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C9CF19214F98B80028D40E /* CMMypageAddressListButtomColCell.swift */; };
+		D5C9CF1C214F98DB0028D40E /* CMMypageFindFriendButtomColCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C9CF1B214F98DB0028D40E /* CMMypageFindFriendButtomColCell.swift */; };
+		D5C9CF1E214FA1900028D40E /* CMMypageFindFriendSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C9CF1D214FA1900028D40E /* CMMypageFindFriendSearchView.swift */; };
+		D5C9CF20215090C10028D40E /* CMMypageAddListButtomSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C9CF1F215090C10028D40E /* CMMypageAddListButtomSectionView.swift */; };
+		D5C9CF2221509EFB0028D40E /* CMMypageAddListButtomSectionTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C9CF2121509EFB0028D40E /* CMMypageAddListButtomSectionTableCell.swift */; };
+		D5C9CF242150DAB20028D40E /* CMMypageOtherReleaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C9CF232150DAB20028D40E /* CMMypageOtherReleaseController.swift */; };
+		D5C9CF262150DF470028D40E /* CMMypageOtherMainTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C9CF252150DF470028D40E /* CMMypageOtherMainTable.swift */; };
+		D5C9CF282150E09B0028D40E /* CMMypageOtherMainTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C9CF272150E09B0028D40E /* CMMypageOtherMainTableCell.swift */; };
+		D5C9CF2A2151F7790028D40E /* CMFindPwdController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C9CF292151F7790028D40E /* CMFindPwdController.swift */; };
+		D5C9CF2C215239530028D40E /* CMResetPwdController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C9CF2B215239530028D40E /* CMResetPwdController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +116,49 @@
 		D54D3CE62143ADFD001F6FD6 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		D54D3CEF2143C147001F6FD6 /* CMToolExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMToolExtension.swift; sourceTree = "<group>"; };
 		D54D3CF12143C1BD001F6FD6 /* ToModelExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToModelExtensions.swift; sourceTree = "<group>"; };
+		D5C9CEB52146170B0028D40E /* CMTopSegView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMTopSegView.swift; sourceTree = "<group>"; };
+		D5C9CEB721465DDF0028D40E /* CMJmTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMJmTableView.swift; sourceTree = "<group>"; };
+		D5C9CEB921465DFC0028D40E /* CMPerTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMPerTableView.swift; sourceTree = "<group>"; };
+		D5C9CEBC21466E4E0028D40E /* CMmunityStarViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMmunityStarViewCell.swift; sourceTree = "<group>"; };
+		D5C9CEBE21474D1A0028D40E /* CMmunityStarColCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMmunityStarColCell.swift; sourceTree = "<group>"; };
+		D5C9CEC021475BA40028D40E /* CMmunityMonViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMmunityMonViewCell.swift; sourceTree = "<group>"; };
+		D5C9CEC221475C6B0028D40E /* CMmunityMonColCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMmunityMonColCell.swift; sourceTree = "<group>"; };
+		D5C9CEC421475F060028D40E /* CMmunityMonSecViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMmunityMonSecViewCell.swift; sourceTree = "<group>"; };
+		D5C9CEC62147929F0028D40E /* CMmunityMonStarViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMmunityMonStarViewCell.swift; sourceTree = "<group>"; };
+		D5C9CEC921479F820028D40E /* CMReferRoomMainTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMReferRoomMainTable.swift; sourceTree = "<group>"; };
+		D5C9CECB2147A2960028D40E /* CMReferRoomHeadSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMReferRoomHeadSectionView.swift; sourceTree = "<group>"; };
+		D5C9CECD2147C6730028D40E /* CMReferRoomFileTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMReferRoomFileTableCell.swift; sourceTree = "<group>"; };
+		D5C9CECF2148A1520028D40E /* CMReferRoomUploadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMReferRoomUploadView.swift; sourceTree = "<group>"; };
+		D5C9CED12148B6320028D40E /* CMReferRoomNewFileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMReferRoomNewFileView.swift; sourceTree = "<group>"; };
+		D5C9CEEF2149F78F0028D40E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		D5C9CEF02149F78F0028D40E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		D5C9CEF12149F7960028D40E /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Main.strings; sourceTree = "<group>"; };
+		D5C9CEF22149F7960028D40E /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		D5C9CEF62149F7D20028D40E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D5C9CEF82149F7D20028D40E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		D5C9CEF92149F7D20028D40E /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D5C9CEFD2149FDE20028D40E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D5C9CEFF2149FDE30028D40E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		D5C9CF002149FDE70028D40E /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D5C9CF02214B4DE10028D40E /* CMBasedataSegHeadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMBasedataSegHeadView.swift; sourceTree = "<group>"; };
+		D5C9CF04214B5C560028D40E /* CMBasedataCollectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMBasedataCollectView.swift; sourceTree = "<group>"; };
+		D5C9CF07214CAA970028D40E /* CMMypageMainTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMMypageMainTable.swift; sourceTree = "<group>"; };
+		D5C9CF09214CDB570028D40E /* CMMypageMainTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMMypageMainTableCell.swift; sourceTree = "<group>"; };
+		D5C9CF0B214CE5290028D40E /* CMMypageReleaseButtomColCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMMypageReleaseButtomColCell.swift; sourceTree = "<group>"; };
+		D5C9CF0D214CF8E40028D40E /* CMPersonalSettingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMPersonalSettingController.swift; sourceTree = "<group>"; };
+		D5C9CF0F214F35D80028D40E /* CMMypageReleaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMMypageReleaseController.swift; sourceTree = "<group>"; };
+		D5C9CF15214F81A40028D40E /* CMMypageReleaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CMMypageReleaseTableViewCell.swift; path = GigaCmt/CMMyPages/CMMypageReleaseTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		D5C9CF17214F98730028D40E /* CMMypageRestButtomColCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMMypageRestButtomColCell.swift; sourceTree = "<group>"; };
+		D5C9CF19214F98B80028D40E /* CMMypageAddressListButtomColCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMMypageAddressListButtomColCell.swift; sourceTree = "<group>"; };
+		D5C9CF1B214F98DB0028D40E /* CMMypageFindFriendButtomColCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMMypageFindFriendButtomColCell.swift; sourceTree = "<group>"; };
+		D5C9CF1D214FA1900028D40E /* CMMypageFindFriendSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMMypageFindFriendSearchView.swift; sourceTree = "<group>"; };
+		D5C9CF1F215090C10028D40E /* CMMypageAddListButtomSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMMypageAddListButtomSectionView.swift; sourceTree = "<group>"; };
+		D5C9CF2121509EFB0028D40E /* CMMypageAddListButtomSectionTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMMypageAddListButtomSectionTableCell.swift; sourceTree = "<group>"; };
+		D5C9CF232150DAB20028D40E /* CMMypageOtherReleaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMMypageOtherReleaseController.swift; sourceTree = "<group>"; };
+		D5C9CF252150DF470028D40E /* CMMypageOtherMainTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMMypageOtherMainTable.swift; sourceTree = "<group>"; };
+		D5C9CF272150E09B0028D40E /* CMMypageOtherMainTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMMypageOtherMainTableCell.swift; sourceTree = "<group>"; };
+		D5C9CF292151F7790028D40E /* CMFindPwdController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMFindPwdController.swift; sourceTree = "<group>"; };
+		D5C9CF2B215239530028D40E /* CMResetPwdController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMResetPwdController.swift; sourceTree = "<group>"; };
 		D921FD04E858E2EA45EA833F /* Pods-GigaCmt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GigaCmt.release.xcconfig"; path = "Pods/Target Support Files/Pods-GigaCmt/Pods-GigaCmt.release.xcconfig"; sourceTree = "<group>"; };
 		F06BB438EE0309CF3BC75474 /* Pods_GigaCmtTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GigaCmtTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -166,6 +244,10 @@
 				D54D3CCF21426E40001F6FD6 /* Base */,
 				D54D3CDE214279EA001F6FD6 /* Logins */,
 				D54D3CA121426B86001F6FD6 /* AppDelegate.swift */,
+				D5C9CEB4214616BC0028D40E /* Communities */,
+				D5C9CEC821479C8D0028D40E /* CMReferRoom */,
+				D5C9CF01214B4D000028D40E /* CMBaseData */,
+				D5C9CF06214CA5E50028D40E /* CMMyPages */,
 				D54D3CD4214272CF001F6FD6 /* CMCommunityController.swift */,
 				D54D3CD621427316001F6FD6 /* CMForumController.swift */,
 				D54D3CD821427352001F6FD6 /* CMReferRoomController.swift */,
@@ -175,6 +257,8 @@
 				D54D3CA821426B87001F6FD6 /* Assets.xcassets */,
 				D54D3CAA21426B87001F6FD6 /* LaunchScreen.storyboard */,
 				D54D3CAD21426B88001F6FD6 /* Info.plist */,
+				D5C9CEFE2149FDE20028D40E /* Localizable.strings */,
+				D5C9CEF72149F7D20028D40E /* InfoPlist.strings */,
 			);
 			path = GigaCmt;
 			sourceTree = "<group>";
@@ -212,6 +296,8 @@
 			isa = PBXGroup;
 			children = (
 				D54D3CDF21427A2C001F6FD6 /* CMLoginController.swift */,
+				D5C9CF292151F7790028D40E /* CMFindPwdController.swift */,
+				D5C9CF2B215239530028D40E /* CMResetPwdController.swift */,
 			);
 			path = Logins;
 			sourceTree = "<group>";
@@ -231,6 +317,73 @@
 				D54D3CEF2143C147001F6FD6 /* CMToolExtension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		D5C9CEB4214616BC0028D40E /* Communities */ = {
+			isa = PBXGroup;
+			children = (
+				D5C9CEBB21466DBF0028D40E /* cells */,
+				D5C9CEB52146170B0028D40E /* CMTopSegView.swift */,
+				D5C9CEB721465DDF0028D40E /* CMJmTableView.swift */,
+				D5C9CEB921465DFC0028D40E /* CMPerTableView.swift */,
+			);
+			path = Communities;
+			sourceTree = "<group>";
+		};
+		D5C9CEBB21466DBF0028D40E /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				D5C9CEBC21466E4E0028D40E /* CMmunityStarViewCell.swift */,
+				D5C9CEBE21474D1A0028D40E /* CMmunityStarColCell.swift */,
+				D5C9CEC021475BA40028D40E /* CMmunityMonViewCell.swift */,
+				D5C9CEC221475C6B0028D40E /* CMmunityMonColCell.swift */,
+				D5C9CEC421475F060028D40E /* CMmunityMonSecViewCell.swift */,
+				D5C9CEC62147929F0028D40E /* CMmunityMonStarViewCell.swift */,
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
+		D5C9CEC821479C8D0028D40E /* CMReferRoom */ = {
+			isa = PBXGroup;
+			children = (
+				D5C9CEC921479F820028D40E /* CMReferRoomMainTable.swift */,
+				D5C9CECB2147A2960028D40E /* CMReferRoomHeadSectionView.swift */,
+				D5C9CECD2147C6730028D40E /* CMReferRoomFileTableCell.swift */,
+				D5C9CECF2148A1520028D40E /* CMReferRoomUploadView.swift */,
+				D5C9CED12148B6320028D40E /* CMReferRoomNewFileView.swift */,
+			);
+			path = CMReferRoom;
+			sourceTree = "<group>";
+		};
+		D5C9CF01214B4D000028D40E /* CMBaseData */ = {
+			isa = PBXGroup;
+			children = (
+				D5C9CF02214B4DE10028D40E /* CMBasedataSegHeadView.swift */,
+				D5C9CF04214B5C560028D40E /* CMBasedataCollectView.swift */,
+			);
+			path = CMBaseData;
+			sourceTree = "<group>";
+		};
+		D5C9CF06214CA5E50028D40E /* CMMyPages */ = {
+			isa = PBXGroup;
+			children = (
+				D5C9CF0D214CF8E40028D40E /* CMPersonalSettingController.swift */,
+				D5C9CF0F214F35D80028D40E /* CMMypageReleaseController.swift */,
+				D5C9CF232150DAB20028D40E /* CMMypageOtherReleaseController.swift */,
+				D5C9CF07214CAA970028D40E /* CMMypageMainTable.swift */,
+				D5C9CF09214CDB570028D40E /* CMMypageMainTableCell.swift */,
+				D5C9CF252150DF470028D40E /* CMMypageOtherMainTable.swift */,
+				D5C9CF272150E09B0028D40E /* CMMypageOtherMainTableCell.swift */,
+				D5C9CF0B214CE5290028D40E /* CMMypageReleaseButtomColCell.swift */,
+				D5C9CF19214F98B80028D40E /* CMMypageAddressListButtomColCell.swift */,
+				D5C9CF1B214F98DB0028D40E /* CMMypageFindFriendButtomColCell.swift */,
+				D5C9CF17214F98730028D40E /* CMMypageRestButtomColCell.swift */,
+				D5C9CF1D214FA1900028D40E /* CMMypageFindFriendSearchView.swift */,
+				D5C9CF15214F81A40028D40E /* CMMypageReleaseTableViewCell.swift */,
+				D5C9CF1F215090C10028D40E /* CMMypageAddListButtomSectionView.swift */,
+				D5C9CF2121509EFB0028D40E /* CMMypageAddListButtomSectionTableCell.swift */,
+			);
+			path = CMMyPages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -328,6 +481,8 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
+				ko,
 			);
 			mainGroup = D54D3C9521426B86001F6FD6;
 			productRefGroup = D54D3C9F21426B86001F6FD6 /* Products */;
@@ -346,7 +501,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5C9CEFC2149FDE20028D40E /* Localizable.strings in Resources */,
 				D54D3CAC21426B87001F6FD6 /* LaunchScreen.storyboard in Resources */,
+				D5C9CEF52149F7D20028D40E /* InfoPlist.strings in Resources */,
 				D54D3CA921426B87001F6FD6 /* Assets.xcassets in Resources */,
 				D54D3CA721426B86001F6FD6 /* Main.storyboard in Resources */,
 			);
@@ -411,6 +568,7 @@
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/PhotoBrowserSwift/PhotoBrowserSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
@@ -422,6 +580,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PhotoBrowserSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
@@ -537,19 +696,52 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5C9CEBF21474D1A0028D40E /* CMmunityStarColCell.swift in Sources */,
 				D54D3CD121426E86001F6FD6 /* CMTabBarController.swift in Sources */,
+				D5C9CF05214B5C560028D40E /* CMBasedataCollectView.swift in Sources */,
+				D5C9CF282150E09B0028D40E /* CMMypageOtherMainTableCell.swift in Sources */,
+				D5C9CF20215090C10028D40E /* CMMypageAddListButtomSectionView.swift in Sources */,
 				D54D3CE22143617B001F6FD6 /* CMAccount.swift in Sources */,
+				D5C9CF08214CAA970028D40E /* CMMypageMainTable.swift in Sources */,
+				D5C9CF0C214CE5290028D40E /* CMMypageReleaseButtomColCell.swift in Sources */,
+				D5C9CEB62146170B0028D40E /* CMTopSegView.swift in Sources */,
+				D5C9CEC72147929F0028D40E /* CMmunityMonStarViewCell.swift in Sources */,
+				D5C9CF262150DF470028D40E /* CMMypageOtherMainTable.swift in Sources */,
 				D54D3CDB2142736D001F6FD6 /* CMDatabaseController.swift in Sources */,
+				D5C9CEC521475F060028D40E /* CMmunityMonSecViewCell.swift in Sources */,
+				D5C9CF1E214FA1900028D40E /* CMMypageFindFriendSearchView.swift in Sources */,
+				D5C9CED02148A1520028D40E /* CMReferRoomUploadView.swift in Sources */,
+				D5C9CEBD21466E4E0028D40E /* CMmunityStarViewCell.swift in Sources */,
+				D5C9CECC2147A2960028D40E /* CMReferRoomHeadSectionView.swift in Sources */,
+				D5C9CF1C214F98DB0028D40E /* CMMypageFindFriendButtomColCell.swift in Sources */,
 				D54D3CDD21427383001F6FD6 /* CMMyPageController.swift in Sources */,
+				D5C9CF1A214F98B80028D40E /* CMMypageAddressListButtomColCell.swift in Sources */,
 				D54D3CD921427352001F6FD6 /* CMReferRoomController.swift in Sources */,
 				D54D3CE021427A2C001F6FD6 /* CMLoginController.swift in Sources */,
+				D5C9CF16214F81A50028D40E /* CMMypageReleaseTableViewCell.swift in Sources */,
+				D5C9CF18214F98730028D40E /* CMMypageRestButtomColCell.swift in Sources */,
+				D5C9CECE2147C6730028D40E /* CMReferRoomFileTableCell.swift in Sources */,
+				D5C9CF10214F35D80028D40E /* CMMypageReleaseController.swift in Sources */,
+				D5C9CECA21479F820028D40E /* CMReferRoomMainTable.swift in Sources */,
+				D5C9CF0E214CF8E40028D40E /* CMPersonalSettingController.swift in Sources */,
 				D54D3CD721427316001F6FD6 /* CMForumController.swift in Sources */,
+				D5C9CF2C215239530028D40E /* CMResetPwdController.swift in Sources */,
+				D5C9CEB821465DDF0028D40E /* CMJmTableView.swift in Sources */,
+				D5C9CF2221509EFB0028D40E /* CMMypageAddListButtomSectionTableCell.swift in Sources */,
+				D5C9CED22148B6320028D40E /* CMReferRoomNewFileView.swift in Sources */,
 				D54D3CE521437114001F6FD6 /* MoyaManager.swift in Sources */,
 				D54D3CD321427264001F6FD6 /* BaseController.swift in Sources */,
+				D5C9CF0A214CDB570028D40E /* CMMypageMainTableCell.swift in Sources */,
 				D54D3CF22143C1BD001F6FD6 /* ToModelExtensions.swift in Sources */,
+				D5C9CF242150DAB20028D40E /* CMMypageOtherReleaseController.swift in Sources */,
+				D5C9CEC321475C6B0028D40E /* CMmunityMonColCell.swift in Sources */,
 				D54D3CA221426B86001F6FD6 /* AppDelegate.swift in Sources */,
+				D5C9CEC121475BA40028D40E /* CMmunityMonViewCell.swift in Sources */,
+				D5C9CF2A2151F7790028D40E /* CMFindPwdController.swift in Sources */,
 				D54D3CF02143C147001F6FD6 /* CMToolExtension.swift in Sources */,
+				D5C9CF03214B4DE10028D40E /* CMBasedataSegHeadView.swift in Sources */,
 				D54D3CD5214272CF001F6FD6 /* CMCommunityController.swift in Sources */,
+				D5C9CEBA21465DFC0028D40E /* CMPerTableView.swift in Sources */,
 				D54D3CE72143ADFD001F6FD6 /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -590,6 +782,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				D54D3CA621426B86001F6FD6 /* Base */,
+				D5C9CEEF2149F78F0028D40E /* zh-Hans */,
+				D5C9CEF12149F7960028D40E /* ko */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -598,8 +792,30 @@
 			isa = PBXVariantGroup;
 			children = (
 				D54D3CAB21426B87001F6FD6 /* Base */,
+				D5C9CEF02149F78F0028D40E /* zh-Hans */,
+				D5C9CEF22149F7960028D40E /* ko */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		D5C9CEF72149F7D20028D40E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D5C9CEF62149F7D20028D40E /* en */,
+				D5C9CEF82149F7D20028D40E /* zh-Hans */,
+				D5C9CEF92149F7D20028D40E /* ko */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D5C9CEFE2149FDE20028D40E /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D5C9CEFD2149FDE20028D40E /* en */,
+				D5C9CEFF2149FDE30028D40E /* zh-Hans */,
+				D5C9CF002149FDE70028D40E /* ko */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -609,6 +825,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -669,6 +886,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -725,11 +943,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RY4WY3W6MH;
+				DEVELOPMENT_TEAM = W6JK3FHE8S;
 				INFOPLIST_FILE = GigaCmt/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = kr.co.gigait.GigaCmt;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gigakorea.kfme;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -742,11 +963,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RY4WY3W6MH;
+				DEVELOPMENT_TEAM = W6JK3FHE8S;
 				INFOPLIST_FILE = GigaCmt/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = kr.co.gigait.GigaCmt;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gigakorea.kfme;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -762,7 +986,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RY4WY3W6MH;
 				INFOPLIST_FILE = GigaCmtTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = kr.co.gigait.GigaCmtTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -780,7 +1008,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RY4WY3W6MH;
 				INFOPLIST_FILE = GigaCmtTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = kr.co.gigait.GigaCmtTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -797,7 +1029,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RY4WY3W6MH;
 				INFOPLIST_FILE = GigaCmtUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = kr.co.gigait.GigaCmtUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -814,7 +1050,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RY4WY3W6MH;
 				INFOPLIST_FILE = GigaCmtUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = kr.co.gigait.GigaCmtUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

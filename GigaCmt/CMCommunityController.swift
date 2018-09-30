@@ -9,32 +9,75 @@
 import UIKit
 import RxSwift
 
+
 class CMCommunityController: BaseController {
 
+	let cmScrollView:UIScrollView = UIScrollView()
+	var badge:UILabel?
     override func viewDidLoad() {
         super.viewDidLoad()
-
-		let btn = UIButton()
-	    view.addSubview(btn)
+ 		headView()
+		CmScrollView()
 		
+     }
+
 	
-        // Do any additional setup after loading the view.
-    }
+	private func headView(){
+		let rightbtn:UIButton = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
+		rightbtn.addTarget(self, action: #selector(Ling), for:.touchUpInside)
+		rightbtn.setImage(UIImage(named: "icon_message")?.withRenderingMode(.alwaysOriginal), for: .normal)
+ 		self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: rightbtn)
+		
+		badge = UILabel()
+		badge?.layer.cornerRadius = 6
+		badge?.layer.masksToBounds = true
+		badge?.backgroundColor = UIColor.red
+		rightbtn.addSubview(badge!)
+		badge?.snp.makeConstraints { (make) in
+			make.top.equalToSuperview().offset(-2)
+			make.width.height.equalTo(12)
+			make.right.equalToSuperview().offset(3)
+		}
+ 
+		let cmTopSeg:CMTopSegView = CMTopSegView.init(frame: CGRect(x: 0, y: 0, width: 120, height: 40))
+		cmTopSeg.clickHeadIndexMap = {[weak self](index:CGFloat)->Void in
+			
+			self?.cmScrollView.contentOffset.x = index*Constant.screenWidth
+ 
+		}
+		self.navigationItem.titleView = cmTopSeg
+ 
+ 	}
+	
+	
+	@objc private func Ling(sender:UIButton){
+		print("铃声 ~~~ ")
+	}
+	
+	
+}
+extension CMCommunityController:UIScrollViewDelegate{
+	
+ 	private func CmScrollView(){
+		
+		UserDefaults.standard.set(self.tabBarController?.tabBar.height, forKey: "tabBarH")
+		UserDefaults.standard.synchronize()
+ 
+		cmScrollView.delegate = self
+		cmScrollView.isScrollEnabled = false
+ 		cmScrollView.contentSize = CGSize(width: Constant.screenWidth*2, height: Constant.screenHeight)
+		view.addSubview(cmScrollView)
+  		cmScrollView.snp.makeConstraints { (make) in
+			make.edges.equalToSuperview()
+ 		}
+		
+		let tableHeight:CGFloat = Constant.screenHeight - (self.tabBarController?.tabBar.height)! - 10.0
+		
+		let jmTableview = CMJmTableView(frame: CGRect(x: 0, y: 0, width: Constant.screenWidth, height: tableHeight))
+		cmScrollView.addSubview(jmTableview)
+		
+		let perTableview = CMPerTableView(frame: CGRect(x: Constant.screenWidth, y: 0, width: Constant.screenWidth, height:tableHeight))
+		cmScrollView.addSubview(perTableview)
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+ 	}
 }

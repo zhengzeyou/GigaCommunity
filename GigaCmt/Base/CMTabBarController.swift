@@ -25,15 +25,15 @@ class CMTabBarController: UITabBarController {
 		var image:UIImage?{
 			switch self {
 			case .community:
-				return UIImage(named: "")?.withRenderingMode(.alwaysOriginal)
+				return UIImage(named: "icon_community_n")?.withRenderingMode(.alwaysOriginal)
 			case .forum:
-				return UIImage(named: "")?.withRenderingMode(.alwaysOriginal)
+				return UIImage(named: "icon_forum_n")?.withRenderingMode(.alwaysOriginal)
  			case .referenceRoom:
-				return UIImage(named: "")?.withRenderingMode(.alwaysOriginal)
+				return UIImage(named: "icon_data_n")?.withRenderingMode(.alwaysOriginal)
  			case .database:
-				return UIImage(named: "")?.withRenderingMode(.alwaysOriginal)
+				return UIImage(named: "icon_library_n")?.withRenderingMode(.alwaysOriginal)
 			case .mypage:
-				return UIImage(named: "")?.withRenderingMode(.alwaysOriginal)
+				return UIImage(named: "icon_me_n")?.withRenderingMode(.alwaysOriginal)
 
  			}
 		}
@@ -41,15 +41,15 @@ class CMTabBarController: UITabBarController {
 		var selectimage:UIImage?{
 			switch self {
 			case .community:
-				return UIImage(named: "")?.withRenderingMode(.alwaysOriginal)
+				return UIImage(named: "icon_community_s")?.withRenderingMode(.alwaysOriginal)
 			case .forum:
-				return UIImage(named: "")?.withRenderingMode(.alwaysOriginal)
+				return UIImage(named: "icon_forum_s")?.withRenderingMode(.alwaysOriginal)
 			case .referenceRoom:
-				return UIImage(named: "")?.withRenderingMode(.alwaysOriginal)
+				return UIImage(named: "icon_data_s")?.withRenderingMode(.alwaysOriginal)
 			case .database:
-				return UIImage(named: "")?.withRenderingMode(.alwaysOriginal)
+				return UIImage(named: "icon_library_s")?.withRenderingMode(.alwaysOriginal)
 			case .mypage:
-				return UIImage(named: "")?.withRenderingMode(.alwaysOriginal)
+				return UIImage(named: "icon_me_s")?.withRenderingMode(.alwaysOriginal)
 				
 			}
 		}
@@ -58,15 +58,15 @@ class CMTabBarController: UITabBarController {
 		var title:String?{
 			switch self {
 			case .community:
-				return "社区"
+ 				return "社区".localized()
 			case .forum:
-				return "论坛"
+				return "论坛".localized()
 			case .referenceRoom:
-				return "资料室"
- 			case .database:
-				return "数据库"
+				return "资料室".localized()
+			case .database:
+				return "资料库".localized()
  			case .mypage:
-				return "我的"
+				return "我的".localized()
 
 			}
 		}
@@ -94,19 +94,15 @@ class CMTabBarController: UITabBarController {
 		let databaseNavi = UINavigationController(rootViewController: database)
 
 		let mypage = CMMyPageController()
-		mypage.title = Tab.mypage.title
-		let mypageNavi = UINavigationController(rootViewController: mypage)
+ 		let mypageNavi = UINavigationController(rootViewController: mypage)
 
 		
 		
 		viewControllers = [communityNavi,forumNavi,referNavi,databaseNavi,mypageNavi]
 		tabBar.barTintColor = UIColor.white
 		
-		
-		
-		UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor: UIColor.brown], for: .selected)
-		
-		
+ 		UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor: Constant.blackColor], for: .selected)
+ 
 		viewControllers?.enumerated().forEach({ (offset, controller) in
 			let tab = Tab(offset: offset)
 			controller.tabBarItem = UITabBarItem(title: tab.title, image: tab.image, selectedImage: tab.selectimage)

@@ -9,11 +9,15 @@
 import UIKit
 
 class BaseController: UIViewController {
-
-    override func viewDidLoad() {
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+//		self.extendedLayoutIncludesOpaqueBars = false
+		
+	}
+     override func viewDidLoad() {
         super.viewDidLoad()
-		view.backgroundColor = UIColor.colorFromHex(hex: 0xfffffe)
- 
+		view.backgroundColor = Constant.vcBgColor
+
 	}
 
     override func didReceiveMemoryWarning() {

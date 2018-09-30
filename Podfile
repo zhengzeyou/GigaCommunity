@@ -7,9 +7,10 @@ target 'GigaCmt' do
 
   pod 'SnapKit'
   pod 'Moya/RxSwift', '~> 11.0'
-  pod 'HandyJSON', '~> 4.1.3'
+  pod 'HandyJSON', '~> 4.2.0-beta1'
   pod 'ObjectMapper', '~> 3.3.0'
   pod 'Kingfisher', '~> 4.8.1'
+  pod 'PhotoBrowserSwift', '~> 0.0.3'
   
   # Pods for DigitalDomain
 
