@@ -17,6 +17,6 @@ struct Constant {
  	static let blackColor:UIColor = UIColor.colorFromHex(hex: 0x111111)
 	static let greyColor:UIColor = UIColor.colorFromHex(hex: 0x999999)
  	static let vcBgColor:UIColor = UIColor.colorFromHex(hex: 0xfffffe)
-
+	static let blueColor:UIColor = UIColor.colorFromHex(hex: 0x113981)
 }
  

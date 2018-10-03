@@ -35,7 +35,7 @@ class CMFindPwdController: BaseController {
 		nextTepBtn.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
  		nextTepBtn.layer.cornerRadius = 5
 		nextTepBtn.layer.masksToBounds = true
-		nextTepBtn.setTitle("下一步", for: .normal)
+		nextTepBtn.setTitle("下一步".localized(), for: .normal)
 		nextTepBtn.backgroundColor = UIColor.colorFromHex(hex: 0x113981)
 		nextTepBtn.setTitleColor(Constant.vcBgColor, for: .normal)
 		self.view.addSubview(nextTepBtn)
@@ -50,7 +50,7 @@ class CMFindPwdController: BaseController {
 	}
 	private func addNavigationBar(){
 		
-		self.navigationItem.title = "找回密码"
+		self.navigationItem.title = "找回密码".localized()
 		self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "icon_back"), style: .plain, target: self, action: #selector(backaction))
 		self.navigationController?.navigationBar.tintColor = Constant.blackColor
 		
@@ -74,11 +74,11 @@ extension CMFindPwdController:UITableViewDelegate,UITableViewDataSource{
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell:UITableViewCell = UITableViewCell()
- 		cell.textLabel?.text = (indexPath.row == 0 ? "姓名" : "用户名")
+ 		cell.textLabel?.text = (indexPath.row == 0 ? "姓名".localized() : "用户名".localized())
 		
 		let input:UITextField = UITextField()
 		input.tintColor = Constant.blackColor
-		input.placeholder = (indexPath.row == 0 ? "请输入注册时真是姓名" : "请输入注册时用户名")
+		input.placeholder = (indexPath.row == 0 ? "请输入注册时真是姓名".localized() : "请输入注册时用户名".localized())
 		cell.contentView.addSubview(input)
 		input.snp.makeConstraints { (make) in
 			make.right.top.bottom.equalToSuperview()

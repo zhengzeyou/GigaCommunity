@@ -97,7 +97,7 @@ extension CMReferRoomNewFileView:UICollectionViewDelegate,UICollectionViewDelega
 		let title:UILabel = UILabel()
 		title.text = titles.object(at: indexPath.row) as? String
 		title.textAlignment = .center
-		title.textColor = UIColor.colorFromHex(hex: 0x999999)
+		title.textColor = Constant.greyColor
 		title.font = UIFont.systemFont(ofSize: 12)
 		cell.contentView.addSubview(title)
 		title.snp.makeConstraints { (make) in

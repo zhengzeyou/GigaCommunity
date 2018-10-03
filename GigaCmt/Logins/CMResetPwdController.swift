@@ -34,7 +34,7 @@ class CMResetPwdController: BaseController {
 		nextTepBtn.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
 		nextTepBtn.layer.cornerRadius = 5
 		nextTepBtn.layer.masksToBounds = true
-		nextTepBtn.setTitle("确定", for: .normal)
+		nextTepBtn.setTitle("确定".localized(), for: .normal)
 		nextTepBtn.backgroundColor = UIColor.colorFromHex(hex: 0x113981)
 		nextTepBtn.setTitleColor(Constant.vcBgColor, for: .normal)
 		self.view.addSubview(nextTepBtn)
@@ -49,7 +49,7 @@ class CMResetPwdController: BaseController {
 	}
 	private func addNavigationBar(){
 		
-		self.navigationItem.title = "重置密码"
+		self.navigationItem.title = "重置密码".localized()
 		self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "icon_back"), style: .plain, target: self, action: #selector(backaction))
 		self.navigationController?.navigationBar.tintColor = Constant.blackColor
 		
@@ -73,11 +73,11 @@ extension CMResetPwdController:UITableViewDelegate,UITableViewDataSource{
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell:UITableViewCell = UITableViewCell()
-		cell.textLabel?.text = (indexPath.row == 0 ? "设置新密码" : "确认新密码")
+		cell.textLabel?.text = (indexPath.row == 0 ? "设置新密码".localized() : "确认新密码".localized())
 
 		let input:UITextField = UITextField()
 		input.tintColor = Constant.blackColor
-		input.placeholder = (indexPath.row == 0 ? "请输入新密码" : "请再次确认输入的密码")
+		input.placeholder = (indexPath.row == 0 ? "请输入新密码".localized() : "请再次确认输入的密码".localized())
 		cell.contentView.addSubview(input)
 		input.snp.makeConstraints { (make) in
 			make.right.top.bottom.equalToSuperview()

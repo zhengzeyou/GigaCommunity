@@ -80,7 +80,7 @@ class CMLoginController: BaseController {
 		}
 		
 		let inputUse:UITextField = UITextField()
-		inputUse.placeholder = "输入用户名"
+		inputUse.placeholder = "输入用户名".localized()
 		inputUse.tintColor = Constant.greyColor
  		userBg.addSubview(inputUse)
 		inputUse.snp.makeConstraints { (make) in
@@ -102,7 +102,7 @@ class CMLoginController: BaseController {
 		}
 		
 		let inputpwd:UITextField = UITextField()
-		inputpwd.placeholder = "输入密码"
+		inputpwd.placeholder = "输入密码".localized()
 		inputpwd.tintColor = Constant.greyColor
 		pwdBg.addSubview(inputpwd)
 		inputpwd.snp.makeConstraints { (make) in
@@ -123,7 +123,7 @@ class CMLoginController: BaseController {
 		let findpwdBtn:UIButton = UIButton(type: .custom)
 		findpwdBtn.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
 		findpwdBtn.tag = ButtonTypes.findPwd.Tag!
- 		findpwdBtn.setTitle("找回密码", for: .normal)
+ 		findpwdBtn.setTitle("找回密码".localized(), for: .normal)
 		findpwdBtn.titleLabel?.font = UIFont.systemFont(ofSize: 15)
 		findpwdBtn.setTitleColor(Constant.greyColor, for: .normal)
  		findpwdBg.addSubview(findpwdBtn)
@@ -146,7 +146,7 @@ class CMLoginController: BaseController {
 		let checkUserBtn:UIButton = UIButton(type: .custom)
 		checkUserBtn.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
 		checkUserBtn.tag = ButtonTypes.checkUser.Tag!
-   		checkUserBtn.setTitle("查找用户名", for: .normal)
+   		checkUserBtn.setTitle("查找用户名".localized(), for: .normal)
 		checkUserBtn.titleLabel?.font = UIFont.systemFont(ofSize: 15)
 		checkUserBtn.setTitleColor(Constant.greyColor, for: .normal)
 		findpwdBg.addSubview(checkUserBtn)
@@ -163,8 +163,8 @@ class CMLoginController: BaseController {
 		loginBtn.tag = ButtonTypes.login.Tag!
   		loginBtn.layer.cornerRadius = 5
 		loginBtn.layer.masksToBounds = true
-		loginBtn.setTitle("登录", for: .normal)
-		loginBtn.backgroundColor = UIColor.colorFromHex(hex: 0x113981)
+		loginBtn.setTitle("登录".localized(), for: .normal)
+		loginBtn.backgroundColor = Constant.blueColor
  		loginBtn.setTitleColor(Constant.vcBgColor, for: .normal)
 		self.view.addSubview(loginBtn)
 		loginBtn.snp.makeConstraints { (make) in
@@ -179,9 +179,9 @@ class CMLoginController: BaseController {
 		registerBtn.tag = ButtonTypes.register.Tag!
  		registerBtn.layer.cornerRadius = 5
 		registerBtn.layer.masksToBounds = true
-		registerBtn.layer.borderColor = UIColor.colorFromHex(hex: 0x113981).cgColor
+		registerBtn.layer.borderColor = Constant.blueColor.cgColor
 		registerBtn.layer.borderWidth = 1
- 		registerBtn.setTitle("注册", for: .normal)
+ 		registerBtn.setTitle("注册".localized(), for: .normal)
  		registerBtn.setTitleColor(Constant.greyColor, for: .normal)
 		self.view.addSubview(registerBtn)
 		registerBtn.snp.makeConstraints { (make) in

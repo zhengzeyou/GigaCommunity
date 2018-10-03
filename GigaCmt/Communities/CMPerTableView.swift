@@ -89,16 +89,9 @@ extension CMPerTableView: UITableViewDelegate ,UITableViewDataSource {
 	}
 	
 	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-		//		switch indexPath.section {
-		//		case 0:
-		//		   return 300
-		//		case 1:
-		//			return 400
-		//		default:
-		return 300
-		//		}
 		
-	}
+		return 300
+ 	}
 	
 	
 }
