@@ -30,6 +30,7 @@ class CMMypageOtherReleaseController: UIViewController {
 		addSubviews()
  	}
 
+	
 	private func setNavigationBar(){
  		self.navigationController?.navigationBar.tintColor = Constant.vcBgColor
 		self.navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.plain, target: nil, action: nil)

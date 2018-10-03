@@ -70,7 +70,8 @@ class CMMypageMainTable: UIView {
 		}
 		
 		let nickname:UILabel = UILabel()
-		nickname.text = "大旺哥"
+		nickname.text = "利达"
+		
 		nickname.textColor = Constant.vcBgColor
 		personalView.addSubview(nickname)
 		nickname.snp.makeConstraints { (make) in
