@@ -22,7 +22,7 @@ class CMMypageReleaseButtomColCell: UICollectionViewCell {
 		
 		tableview = UITableView(frame: .zero, style: .plain)
 		tableview?.tableFooterView = UIView()
- 		tableview?.register(CMMypageReleaseTableViewCell.self, forCellReuseIdentifier: "reused")
+  		tableview?.register(CMMypageReleaseTableViewCell.self, forCellReuseIdentifier: "reused")
 		tableview?.estimatedRowHeight = 0
 		tableview?.estimatedSectionFooterHeight = 0
 		tableview?.estimatedSectionHeaderHeight = 0
@@ -44,13 +44,12 @@ extension CMMypageReleaseButtomColCell : UITableViewDelegate,UITableViewDataSour
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell:CMMypageReleaseTableViewCell = tableview?.dequeueReusableCell(withIdentifier: "reused") as! CMMypageReleaseTableViewCell
-		return cell
+ 		return cell
 	}
 	
 	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
 		return 240.0
 	}
-	
 	
 }
 
