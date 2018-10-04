@@ -29,9 +29,16 @@ class CMMypageRestButtomColCell: UICollectionViewCell {
 		tableview?.dataSource = self
 		self.contentView.addSubview(tableview!)
 		tableview?.snp.makeConstraints({ (make) in
+
 			make.edges.equalToSuperview()
 		})
 		
+	}
+	
+	public func refreshConstrains(){
+		tableview?.snp.updateConstraints({ (make) in
+			make.bottom.equalTo(-60)
+		})
 	}
 	
 }

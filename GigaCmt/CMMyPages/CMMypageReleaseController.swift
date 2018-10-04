@@ -41,7 +41,7 @@ class CMMypageReleaseController: BaseController {
 	private func addSubviews(){
 		let text:UITextView = UITextView()
 		text.textColor = Constant.greyColor
-		text.text = "  说些什么吧~~"
+		text.text = "  说些什么吧~~".localized()
 		self.view.addSubview(text)
  		text.snp.makeConstraints { (make) in
 			make.top.left.right.equalToSuperview()

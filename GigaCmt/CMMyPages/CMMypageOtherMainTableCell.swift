@@ -93,6 +93,7 @@ extension CMMypageOtherMainTableCell:UICollectionViewDelegate,UICollectionViewDe
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+		
 		var cell:UICollectionViewCell?
 		if collectionView.tag == 1001 {
 			cell = collectionView.dequeueReusableCell(withReuseIdentifier: "reused", for: indexPath)
@@ -125,9 +126,10 @@ extension CMMypageOtherMainTableCell:UICollectionViewDelegate,UICollectionViewDe
 				cell = collectionView.dequeueReusableCell(withReuseIdentifier: "reused1", for: indexPath)
 				break
 			case 1:
-				cell = collectionView.dequeueReusableCell(withReuseIdentifier: "reused2", for: indexPath)
-				break
-			default:
+				let	cell:CMMypageRestButtomColCell = collectionView.dequeueReusableCell(withReuseIdentifier: "reused2", for: indexPath) as! CMMypageRestButtomColCell
+				cell.refreshConstrains()
+				return cell
+ 			default:
 				break
 			}
 			
