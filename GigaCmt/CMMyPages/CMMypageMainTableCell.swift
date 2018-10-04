@@ -11,6 +11,7 @@ import UIKit
 class CMMypageMainTableCell: UITableViewCell {
 	var headcollectView:UICollectionView?
 	var buttomcollectView:UICollectionView?
+	
 
 	let icons:NSArray = ["icon_my_moment","icon_my_contacts","icon_find_friends","icon_message_board"]
 	let titles:NSArray = ["我的发布".localized(),"通讯录".localized(),"查找好友".localized(),"留言板".localized()]

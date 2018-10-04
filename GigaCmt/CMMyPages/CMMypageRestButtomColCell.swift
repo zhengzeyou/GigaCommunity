@@ -10,8 +10,10 @@ import UIKit
 
 class CMMypageRestButtomColCell: UICollectionViewCell {
 	var tableview:UITableView?
-	override init(frame: CGRect) {
-		super.init(frame: frame)
+	var input:CMMypageInputView?
+	var dataMutableArray:NSMutableArray = ["为了gigakorea大家一起工作加油奋斗！！","为了gigakorea大家一起工作加油奋斗！！","为了gigakorea大家一起工作加油奋斗！！","为了gigakorea大家一起工作加油奋斗！！","为了gigakorea大家一起工作加油奋斗！！"]
+ 	override init(frame: CGRect) {
+  		super.init(frame: frame)
 		addSubViews()
 	}
 	required init?(coder aDecoder: NSCoder) {
@@ -33,19 +35,41 @@ class CMMypageRestButtomColCell: UICollectionViewCell {
 			make.edges.equalToSuperview()
 		})
 		
+		
 	}
+	
+	
+}
+
+
+extension CMMypageRestButtomColCell{
 	
 	public func refreshConstrains(){
 		tableview?.snp.updateConstraints({ (make) in
 			make.bottom.equalTo(-60)
 		})
-	}
+		
+		input = CMMypageInputView()
+		input?.sendReleaseMap = {(content:String) in
+			print(content)
+			self.dataMutableArray.add(content)
+ 			self.tableview?.reloadData()
+			self.tableview?.scrollToRow(at: IndexPath(row:self.dataMutableArray.count - 1, section: 0), at: .bottom, animated: true)
+ 
+		}
+		self.contentView.addSubview(input!)
+		input?.snp.makeConstraints({ (make) in
+			make.left.right.bottom.equalToSuperview()
+			make.height.equalTo(60)
+		})
+ 	}
 	
-}
+	
 
+}
 extension CMMypageRestButtomColCell : UITableViewDelegate,UITableViewDataSource {
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return 5
+		return self.dataMutableArray.count
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -86,7 +110,7 @@ extension CMMypageRestButtomColCell : UITableViewDelegate,UITableViewDataSource 
 		
 		let content:UILabel = UILabel()
 		content.textColor = Constant.blackColor
-		content.text = "为了gigakorea大家一起工作加油奋斗！！"
+		content.text = self.dataMutableArray.object(at: indexPath.row) as? String
 		cell.contentView.addSubview(content)
 		content.snp.makeConstraints { (make) in
 			make.top.equalTo(avator.snp.bottom).offset(5)
@@ -96,6 +120,7 @@ extension CMMypageRestButtomColCell : UITableViewDelegate,UITableViewDataSource 
 		
 		
 		let delbtn:UIButton = UIButton(type: .custom)
+		delbtn.tag = indexPath.row
 		delbtn.addTarget(self, action: #selector(deleteFunc), for: .touchUpInside)
 		delbtn.layer.cornerRadius = 15
 		delbtn.layer.masksToBounds = true
@@ -121,7 +146,7 @@ extension CMMypageRestButtomColCell : UITableViewDelegate,UITableViewDataSource 
 	
 	
 	@objc private func deleteFunc(sender:UIButton){
-		
+		self.dataMutableArray.removeObject(at: sender.tag)
 		self.tableview?.reloadData()
 	}
 	
