@@ -30,6 +30,7 @@
 		D54D3CF02143C147001F6FD6 /* CMToolExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54D3CEF2143C147001F6FD6 /* CMToolExtension.swift */; };
 		D54D3CF22143C1BD001F6FD6 /* ToModelExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54D3CF12143C1BD001F6FD6 /* ToModelExtensions.swift */; };
 		D5B2CA532165F8A800B49CE9 /* CMMypageInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B2CA522165F8A800B49CE9 /* CMMypageInputView.swift */; };
+		D5B2CA552166F39B00B49CE9 /* CMMypageCommentRestViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B2CA542166F39B00B49CE9 /* CMMypageCommentRestViewCell.swift */; };
 		D5C9CEB62146170B0028D40E /* CMTopSegView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C9CEB52146170B0028D40E /* CMTopSegView.swift */; };
 		D5C9CEB821465DDF0028D40E /* CMJmTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C9CEB721465DDF0028D40E /* CMJmTableView.swift */; };
 		D5C9CEBA21465DFC0028D40E /* CMPerTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C9CEB921465DFC0028D40E /* CMPerTableView.swift */; };
@@ -118,6 +119,7 @@
 		D54D3CEF2143C147001F6FD6 /* CMToolExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMToolExtension.swift; sourceTree = "<group>"; };
 		D54D3CF12143C1BD001F6FD6 /* ToModelExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToModelExtensions.swift; sourceTree = "<group>"; };
 		D5B2CA522165F8A800B49CE9 /* CMMypageInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMMypageInputView.swift; sourceTree = "<group>"; };
+		D5B2CA542166F39B00B49CE9 /* CMMypageCommentRestViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMMypageCommentRestViewCell.swift; sourceTree = "<group>"; };
 		D5C9CEB52146170B0028D40E /* CMTopSegView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMTopSegView.swift; sourceTree = "<group>"; };
 		D5C9CEB721465DDF0028D40E /* CMJmTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMJmTableView.swift; sourceTree = "<group>"; };
 		D5C9CEB921465DFC0028D40E /* CMPerTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMPerTableView.swift; sourceTree = "<group>"; };
@@ -385,6 +387,7 @@
 				D5C9CF1F215090C10028D40E /* CMMypageAddListButtomSectionView.swift */,
 				D5C9CF2121509EFB0028D40E /* CMMypageAddListButtomSectionTableCell.swift */,
 				D5B2CA522165F8A800B49CE9 /* CMMypageInputView.swift */,
+				D5B2CA542166F39B00B49CE9 /* CMMypageCommentRestViewCell.swift */,
 			);
 			path = CMMyPages;
 			sourceTree = "<group>";
@@ -712,6 +715,7 @@
 				D5C9CF262150DF470028D40E /* CMMypageOtherMainTable.swift in Sources */,
 				D54D3CDB2142736D001F6FD6 /* CMDatabaseController.swift in Sources */,
 				D5C9CEC521475F060028D40E /* CMmunityMonSecViewCell.swift in Sources */,
+				D5B2CA552166F39B00B49CE9 /* CMMypageCommentRestViewCell.swift in Sources */,
 				D5C9CF1E214FA1900028D40E /* CMMypageFindFriendSearchView.swift in Sources */,
 				D5C9CED02148A1520028D40E /* CMReferRoomUploadView.swift in Sources */,
 				D5C9CEBD21466E4E0028D40E /* CMmunityStarViewCell.swift in Sources */,
