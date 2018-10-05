@@ -11,7 +11,7 @@ import UIKit
 class CMMypageCommentRestViewCell: UITableViewCell {
 	var content:UILabel?
 	let delbtn:UIButton = UIButton(type: .custom)
-	var deleCommentCellMap:(Int) -> Void = {(index:Int) in}
+	var deleCommentCellMap:(Int) -> Void = {_ in }
 
 	override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
 		super.init(style: style, reuseIdentifier: reuseIdentifier)

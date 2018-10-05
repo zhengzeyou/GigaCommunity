@@ -78,9 +78,8 @@ extension CMMypageRestButtomColCell : UITableViewDelegate,UITableViewDataSource 
 		
 		let cell:CMMypageCommentRestViewCell = tableView.dequeueReusableCell(withIdentifier: "cellID", for: indexPath) as! CMMypageCommentRestViewCell
   		cell.setCellData(data: (self.dataMutableArray.object(at: indexPath.row) as? String)!)
-		cell.tag = indexPath.row
-		cell.deleCommentCellMap  = {(index:Int) in
- 			self.dataMutableArray.removeObject(at: index)
+ 		cell.deleCommentCellMap = { _ in
+  			self.dataMutableArray.removeObject(at: indexPath.row)
  			self.tableview?.reloadData()
 		}
 
