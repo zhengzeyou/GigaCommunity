@@ -24,11 +24,14 @@ class CMMypageRestButtomColCell: UICollectionViewCell {
 		
 		tableview = UITableView(frame: .zero, style: .plain)
 		tableview?.tableFooterView = UIView()
- 		tableview?.estimatedRowHeight = 0
 		tableview?.estimatedSectionFooterHeight = 0
 		tableview?.estimatedSectionHeaderHeight = 0
 		tableview?.delegate = self
 		tableview?.dataSource = self
+		
+		tableview?.estimatedRowHeight = 200
+  		tableview?.rowHeight = UITableViewAutomaticDimension
+
 		self.contentView.addSubview(tableview!)
 		tableview?.snp.makeConstraints({ (make) in
 
@@ -99,7 +102,7 @@ extension CMMypageRestButtomColCell : UITableViewDelegate,UITableViewDataSource 
 		
 		let time:UILabel = UILabel()
 		time.textColor = Constant.greyColor
-		time.font = UIFont.systemFont(ofSize: 14)
+		time.font = .systemFont(ofSize: 14)
 		time.text = "2018-08-28 15:35"
 		cell.contentView.addSubview(time)
 		time.snp.makeConstraints { (make) in
@@ -109,6 +112,8 @@ extension CMMypageRestButtomColCell : UITableViewDelegate,UITableViewDataSource 
 		}
 		
 		let content:UILabel = UILabel()
+ 		content.font = .systemFont(ofSize: 16)
+		content.numberOfLines = 0
 		content.textColor = Constant.blackColor
 		content.text = self.dataMutableArray.object(at: indexPath.row) as? String
 		cell.contentView.addSubview(content)
@@ -117,14 +122,13 @@ extension CMMypageRestButtomColCell : UITableViewDelegate,UITableViewDataSource 
 			make.left.equalTo(nickname.snp.left)
 			make.right.equalToSuperview().offset(-15)
 		}
-		
-		
-		let delbtn:UIButton = UIButton(type: .custom)
+ 
+ 		let delbtn:UIButton = UIButton(type: .custom)
 		delbtn.tag = indexPath.row
 		delbtn.addTarget(self, action: #selector(deleteFunc), for: .touchUpInside)
 		delbtn.layer.cornerRadius = 15
 		delbtn.layer.masksToBounds = true
-		delbtn.titleLabel?.font = UIFont.systemFont(ofSize: 14.0)
+		delbtn.titleLabel?.font = .systemFont(ofSize: 14.0)
 		delbtn.setTitle("删除".localized(), for: .normal)
 		delbtn.setTitleColor(Constant.greyColor, for: .normal)
 		delbtn.backgroundColor = UIColor.colorFromHex(hex: 0xf2f2f2)

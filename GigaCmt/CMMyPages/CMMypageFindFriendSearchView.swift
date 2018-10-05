@@ -89,7 +89,7 @@ class CMMypageFindFriendSearchView: UIView {
 		let referfriends:UILabel = UILabel()
 		referfriends.text = "推荐好友".localized()
 		referfriends.textColor = Constant.blackColor
-		referfriends.font = UIFont.systemFont(ofSize: 22)
+		referfriends.font = .systemFont(ofSize: 22)
 		self.addSubview(referfriends)
 		referfriends.snp.makeConstraints { (make) in
 			make.top.equalTo(choiceArea.snp.bottom).offset(25)
@@ -100,7 +100,7 @@ class CMMypageFindFriendSearchView: UIView {
 		changeBtn.addTarget(self, action: #selector(changeNext), for: .touchUpInside)
 		changeBtn.setImage(#imageLiteral(resourceName: "icon_refresh"), for: .normal)
 		changeBtn.setTitle(" 换一批".localized(), for: .normal)
-		changeBtn.titleLabel?.font = UIFont.systemFont(ofSize: 15)
+		changeBtn.titleLabel?.font = .systemFont(ofSize: 15)
 		changeBtn.setTitleColor(Constant.greyColor, for: .normal)
 		self.addSubview(changeBtn)
 		changeBtn.snp.makeConstraints { (make) in

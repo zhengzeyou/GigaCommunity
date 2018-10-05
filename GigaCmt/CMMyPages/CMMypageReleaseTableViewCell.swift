@@ -45,7 +45,7 @@ class CMMypageReleaseTableViewCell: UITableViewCell {
 		
 		let time:UILabel = UILabel()
 		time.textColor = Constant.greyColor
-		time.font = UIFont.systemFont(ofSize: 14)
+		time.font = .systemFont(ofSize: 14)
 		time.text = "2018-08-28 15:35"
 		self.contentView.addSubview(time)
 		time.snp.makeConstraints { (make) in
@@ -102,7 +102,7 @@ class CMMypageReleaseTableViewCell: UITableViewCell {
 		let commentCount:UILabel = UILabel()
 		commentCount.textColor = Constant.greyColor
 		commentCount.text = "9"
-		commentCount.font = UIFont.systemFont(ofSize: 15)
+		commentCount.font = .systemFont(ofSize: 15)
 		self.contentView.addSubview(commentCount)
 		commentCount.snp.makeConstraints { (make) in
 			make.centerY.equalTo(commentIcon.snp.centerY)
