@@ -8,6 +8,9 @@ PODS:
   - Moya/RxSwift (11.0.2):
     - Moya/Core
     - RxSwift (~> 4.0)
+  - NVActivityIndicatorView (4.3.0):
+    - NVActivityIndicatorView/Presenter (= 4.3.0)
+  - NVActivityIndicatorView/Presenter (4.3.0)
   - ObjectMapper (3.3.0)
   - PhotoBrowserSwift (0.0.3):
     - Kingfisher
@@ -19,6 +22,7 @@ DEPENDENCIES:
   - HandyJSON (~> 4.2.0-beta1)
   - Kingfisher (~> 4.8.1)
   - Moya/RxSwift (~> 11.0)
+  - NVActivityIndicatorView (~> 4.3.0)
   - ObjectMapper (~> 3.3.0)
   - PhotoBrowserSwift (~> 0.0.3)
   - SnapKit
@@ -28,12 +32,13 @@ SPEC CHECKSUMS:
   HandyJSON: 6e8bf08c47be3680cb369f12fb427127f52b9419
   Kingfisher: 868c1149679a7ab6869be118faa9b5aed154aaf0
   Moya: a725035953bc1c0eb1be505ab903984501d82440
+  NVActivityIndicatorView: 963f62bf9f993fcf23218e55958e5b1761b9504c
   ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
   PhotoBrowserSwift: 6442a91cd4fba0c95377e03b4b4b57fa330bf48a
   Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
   RxSwift: 99e10317ddfcc7fbe01356aafd118fde4a0be104
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
 
-PODFILE CHECKSUM: e3df8aad0c0be0b91e94c36e25722283ffa66817
+PODFILE CHECKSUM: 82cc69d68a4a2aa6863fb428948daff1ba2f1973
 
 COCOAPODS: 1.4.0

@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1043B5B68C9FD62F3280216F6E82D105"
-               BlueprintName = "SnapKit"
+               BlueprintIdentifier = "123F89F7E8DB3444EAD2F61E835952E2"
+               BlueprintName = "NVActivityIndicatorView"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "SnapKit.framework">
+               BuildableName = "NVActivityIndicatorView.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

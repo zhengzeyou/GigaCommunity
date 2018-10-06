@@ -11,8 +11,7 @@ import UIKit
 class BaseController: UIViewController {
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
-//		self.extendedLayoutIncludesOpaqueBars = false
-		
+ 
 	}
      override func viewDidLoad() {
         super.viewDidLoad()

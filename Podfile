@@ -11,7 +11,8 @@ target 'GigaCmt' do
   pod 'ObjectMapper', '~> 3.3.0'
   pod 'Kingfisher', '~> 4.8.1'
   pod 'PhotoBrowserSwift', '~> 0.0.3'
-  
+  pod 'NVActivityIndicatorView', '~> 4.3.0'
+
   # Pods for DigitalDomain
 
   target 'GigaCmtTests' do
