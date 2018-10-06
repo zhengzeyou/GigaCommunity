@@ -200,6 +200,8 @@ class CMLoginController: BaseController {
 		switch sender.tag {
 		case ButtonTypes.login.Tag:
 			print("登录")
+			CMAccount.sharedCMAccount().changeloginOutStatus(tokenStr: "")
+ 
 			break
 		case ButtonTypes.register.Tag:
 			print("注册")

@@ -27,5 +27,19 @@ class CMAccount: NSObject {
 		self.token = token
 	}
 	
+
+	func changeloginOutStatus(tokenStr:String?){
+		
+		CMAccount.sharedCMAccount().token = tokenStr
+ 		guard CMAccount.sharedCMAccount().token != nil else {
+			
+			UIApplication.shared.delegate?.window??.rootViewController = CMLoginController()
+			UIApplication.shared.delegate?.window??.makeKeyAndVisible()
+			
+			return ;
+		}
+		UIApplication.shared.delegate?.window??.rootViewController = CMTabBarController()
+		UIApplication.shared.delegate?.window??.makeKeyAndVisible()
+	}
 	
 }

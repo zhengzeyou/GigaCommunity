@@ -16,16 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
  
-			window = UIWindow(frame: UIScreen.main.bounds)
-		guard CMAccount.sharedCMAccount().token != nil else {
+		
+		window = UIWindow(frame: UIScreen.main.bounds)
+		CMAccount.sharedCMAccount().changeloginOutStatus(tokenStr: "")
  
-			window?.rootViewController = CMLoginController()
-			window?.makeKeyAndVisible()
-
-			return true
-		}
-		window?.rootViewController = CMTabBarController()
-		window?.makeKeyAndVisible()
   		return true
 	}
 

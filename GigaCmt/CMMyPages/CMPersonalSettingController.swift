@@ -43,7 +43,9 @@ class CMPersonalSettingController: BaseController {
 	}
 	
 	@objc private func logoutAction(sender:UIButton){
-		
+		CMAccount.sharedCMAccount().changeloginOutStatus(tokenStr: nil)
+
+
 	}
 
 	private func setNavigationBar(){
