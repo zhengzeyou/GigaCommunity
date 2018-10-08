@@ -29,6 +29,10 @@
 		D54D3CE72143ADFD001F6FD6 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54D3CE62143ADFD001F6FD6 /* Constant.swift */; };
 		D54D3CF02143C147001F6FD6 /* CMToolExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54D3CEF2143C147001F6FD6 /* CMToolExtension.swift */; };
 		D54D3CF22143C1BD001F6FD6 /* ToModelExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54D3CF12143C1BD001F6FD6 /* ToModelExtensions.swift */; };
+		D5637F11216AEFF60003C79A /* CMForumMainColCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5637F10216AEFF60003C79A /* CMForumMainColCell.swift */; };
+		D5637F13216B25DE0003C79A /* CMForumTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5637F12216B25DE0003C79A /* CMForumTableCell.swift */; };
+		D5637F15216B42AF0003C79A /* CMForumDetailedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5637F14216B42AF0003C79A /* CMForumDetailedController.swift */; };
+		D5637F17216B484F0003C79A /* CMForumCommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5637F16216B484F0003C79A /* CMForumCommentTableViewCell.swift */; };
 		D5B2CA532165F8A800B49CE9 /* CMMypageInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B2CA522165F8A800B49CE9 /* CMMypageInputView.swift */; };
 		D5B2CA552166F39B00B49CE9 /* CMMypageCommentRestViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B2CA542166F39B00B49CE9 /* CMMypageCommentRestViewCell.swift */; };
 		D5C9CEB62146170B0028D40E /* CMTopSegView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C9CEB52146170B0028D40E /* CMTopSegView.swift */; };
@@ -118,6 +122,10 @@
 		D54D3CE62143ADFD001F6FD6 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		D54D3CEF2143C147001F6FD6 /* CMToolExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMToolExtension.swift; sourceTree = "<group>"; };
 		D54D3CF12143C1BD001F6FD6 /* ToModelExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToModelExtensions.swift; sourceTree = "<group>"; };
+		D5637F10216AEFF60003C79A /* CMForumMainColCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMForumMainColCell.swift; sourceTree = "<group>"; };
+		D5637F12216B25DE0003C79A /* CMForumTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMForumTableCell.swift; sourceTree = "<group>"; };
+		D5637F14216B42AF0003C79A /* CMForumDetailedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMForumDetailedController.swift; sourceTree = "<group>"; };
+		D5637F16216B484F0003C79A /* CMForumCommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMForumCommentTableViewCell.swift; sourceTree = "<group>"; };
 		D5B2CA522165F8A800B49CE9 /* CMMypageInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMMypageInputView.swift; sourceTree = "<group>"; };
 		D5B2CA542166F39B00B49CE9 /* CMMypageCommentRestViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMMypageCommentRestViewCell.swift; sourceTree = "<group>"; };
 		D5C9CEB52146170B0028D40E /* CMTopSegView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMTopSegView.swift; sourceTree = "<group>"; };
@@ -249,6 +257,7 @@
 				D54D3CDE214279EA001F6FD6 /* Logins */,
 				D54D3CA121426B86001F6FD6 /* AppDelegate.swift */,
 				D5C9CEB4214616BC0028D40E /* Communities */,
+				D5637F0F216AEF480003C79A /* CMForum */,
 				D5C9CEC821479C8D0028D40E /* CMReferRoom */,
 				D5C9CF01214B4D000028D40E /* CMBaseData */,
 				D5C9CF06214CA5E50028D40E /* CMMyPages */,
@@ -321,6 +330,17 @@
 				D54D3CEF2143C147001F6FD6 /* CMToolExtension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		D5637F0F216AEF480003C79A /* CMForum */ = {
+			isa = PBXGroup;
+			children = (
+				D5637F10216AEFF60003C79A /* CMForumMainColCell.swift */,
+				D5637F12216B25DE0003C79A /* CMForumTableCell.swift */,
+				D5637F14216B42AF0003C79A /* CMForumDetailedController.swift */,
+				D5637F16216B484F0003C79A /* CMForumCommentTableViewCell.swift */,
+			);
+			path = CMForum;
 			sourceTree = "<group>";
 		};
 		D5C9CEB4214616BC0028D40E /* Communities */ = {
@@ -734,10 +754,14 @@
 				D5C9CF10214F35D80028D40E /* CMMypageReleaseController.swift in Sources */,
 				D5C9CECA21479F820028D40E /* CMReferRoomMainTable.swift in Sources */,
 				D5C9CF0E214CF8E40028D40E /* CMPersonalSettingController.swift in Sources */,
+				D5637F17216B484F0003C79A /* CMForumCommentTableViewCell.swift in Sources */,
 				D54D3CD721427316001F6FD6 /* CMForumController.swift in Sources */,
 				D5C9CF2C215239530028D40E /* CMResetPwdController.swift in Sources */,
 				D5C9CEB821465DDF0028D40E /* CMJmTableView.swift in Sources */,
+				D5637F11216AEFF60003C79A /* CMForumMainColCell.swift in Sources */,
 				D5C9CF2221509EFB0028D40E /* CMMypageAddListButtomSectionTableCell.swift in Sources */,
+				D5637F15216B42AF0003C79A /* CMForumDetailedController.swift in Sources */,
+				D5637F13216B25DE0003C79A /* CMForumTableCell.swift in Sources */,
 				D5C9CED22148B6320028D40E /* CMReferRoomNewFileView.swift in Sources */,
 				D54D3CE521437114001F6FD6 /* MoyaManager.swift in Sources */,
 				D54D3CD321427264001F6FD6 /* BaseController.swift in Sources */,
@@ -956,7 +980,10 @@
 				DEVELOPMENT_TEAM = W6JK3FHE8S;
 				INFOPLIST_FILE = GigaCmt/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.gigakorea.kfme;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -973,7 +1000,10 @@
 				DEVELOPMENT_TEAM = W6JK3FHE8S;
 				INFOPLIST_FILE = GigaCmt/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.gigakorea.kfme;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -990,7 +1020,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RY4WY3W6MH;
 				INFOPLIST_FILE = GigaCmtTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = kr.co.gigait.GigaCmtTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -1008,7 +1042,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RY4WY3W6MH;
 				INFOPLIST_FILE = GigaCmtTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = kr.co.gigait.GigaCmtTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -1025,7 +1063,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RY4WY3W6MH;
 				INFOPLIST_FILE = GigaCmtUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = kr.co.gigait.GigaCmtUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -1042,7 +1084,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RY4WY3W6MH;
 				INFOPLIST_FILE = GigaCmtUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = kr.co.gigait.GigaCmtUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
