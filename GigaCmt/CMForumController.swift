@@ -110,8 +110,10 @@ extension CMForumController:UICollectionViewDelegate,UICollectionViewDelegateFlo
 			
 		}
 		else {
- 				cell = collectionView.dequeueReusableCell(withReuseIdentifier: "reused1", for: indexPath)
+			
+			cell = collectionView.dequeueReusableCell(withReuseIdentifier: "reused1", for: indexPath)
  
+			
 			
 		}
 		

@@ -165,8 +165,4 @@ extension CMForumDetailedController:UITableViewDelegate,UITableViewDataSource{
 		let stringSize = normalText.boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: dic as? [NSAttributedStringKey : Any], context: nil)
 		return stringSize.height
 	}
-	
-	
-
-	
 }

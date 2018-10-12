@@ -45,6 +45,7 @@ extension CMForumMainColCell : UITableViewDelegate,UITableViewDataSource {
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell:CMForumTableCell = tableview?.dequeueReusableCell(withIdentifier: "reused") as! CMForumTableCell
+		cell.selectionStyle = .none
 		cell.reloadData(dataDic: self.data.object(at: indexPath.row) as! NSDictionary)
 		return cell
 	}

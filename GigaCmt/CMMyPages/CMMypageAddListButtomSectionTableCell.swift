@@ -51,7 +51,7 @@ class CMMypageAddListButtomSectionTableCell: UITableViewCell {
 			make.width.height.equalTo(50)
 		}
 		icon.kf.setImage(with:URL(string:"https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2902141346,3120927423&fm=27&gp=0.jpg")!)
-
+		
 		maintitle.text = "大哥"
 		self.contentView.addSubview(maintitle)
 		maintitle.snp.makeConstraints { (make) in

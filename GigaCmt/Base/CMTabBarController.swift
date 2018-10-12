@@ -13,9 +13,9 @@ class CMTabBarController: UITabBarController {
 	enum Tab:Int {
 		case community
 		case forum
-		case referenceRoom
 		case database
-		case mypage
+		case library
+ 		case mypage
 		
 		init(offset:Int){
 			self.init(rawValue:offset)!
@@ -28,9 +28,9 @@ class CMTabBarController: UITabBarController {
 				return UIImage(named: "icon_community_n")?.withRenderingMode(.alwaysOriginal)
 			case .forum:
 				return UIImage(named: "icon_forum_n")?.withRenderingMode(.alwaysOriginal)
- 			case .referenceRoom:
-				return UIImage(named: "icon_data_n")?.withRenderingMode(.alwaysOriginal)
  			case .database:
+				return UIImage(named: "icon_data_n")?.withRenderingMode(.alwaysOriginal)
+ 			case .library:
 				return UIImage(named: "icon_library_n")?.withRenderingMode(.alwaysOriginal)
 			case .mypage:
 				return UIImage(named: "icon_me_n")?.withRenderingMode(.alwaysOriginal)
@@ -44,9 +44,9 @@ class CMTabBarController: UITabBarController {
 				return UIImage(named: "icon_community_s")?.withRenderingMode(.alwaysOriginal)
 			case .forum:
 				return UIImage(named: "icon_forum_s")?.withRenderingMode(.alwaysOriginal)
-			case .referenceRoom:
-				return UIImage(named: "icon_data_s")?.withRenderingMode(.alwaysOriginal)
 			case .database:
+				return UIImage(named: "icon_data_s")?.withRenderingMode(.alwaysOriginal)
+			case .library:
 				return UIImage(named: "icon_library_s")?.withRenderingMode(.alwaysOriginal)
 			case .mypage:
 				return UIImage(named: "icon_me_s")?.withRenderingMode(.alwaysOriginal)
@@ -61,9 +61,9 @@ class CMTabBarController: UITabBarController {
  				return "社区".localized()
 			case .forum:
 				return "论坛".localized()
-			case .referenceRoom:
-				return "资料室".localized()
 			case .database:
+				return "资料室".localized()
+			case .library:
 				return "资料库".localized()
  			case .mypage:
 				return "我的".localized()
@@ -85,23 +85,22 @@ class CMTabBarController: UITabBarController {
 		forum.title = Tab.forum.title
 		let forumNavi = UINavigationController(rootViewController: forum)
 
-		let refer = CMReferRoomController()
-		refer.title = Tab.referenceRoom.title
-		let referNavi = UINavigationController(rootViewController: refer)
-
-		let database = CMDatabaseController()
+		let database = CMReferRoomController()
 		database.title = Tab.database.title
 		let databaseNavi = UINavigationController(rootViewController: database)
+
+		let library = CMDatabaseController()
+		library.title = Tab.library.title
+		let libraryNavi = UINavigationController(rootViewController: library)
 
 		let mypage = CMMyPageController()
  		let mypageNavi = UINavigationController(rootViewController: mypage)
 
 		
 		
-		viewControllers = [communityNavi,forumNavi,referNavi,databaseNavi,mypageNavi]
+		viewControllers = [communityNavi,forumNavi,databaseNavi,libraryNavi,mypageNavi]
 		tabBar.barTintColor = UIColor.white
-		
- 		UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor: Constant.blackColor], for: .selected)
+  		UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor: Constant.blackColor], for: .selected)
  
 		viewControllers?.enumerated().forEach({ (offset, controller) in
 			let tab = Tab(offset: offset)
