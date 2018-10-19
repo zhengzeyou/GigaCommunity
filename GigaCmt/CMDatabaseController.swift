@@ -67,7 +67,7 @@ class CMDatabaseController: BaseController {
 		
 		rightBtn.isSelected = false
  		if self.isChangeBool! {
- 			sender.isSelected = false
+ 			sender.isSelected = true
 			self.isChangeBool = false
 
  		}else{
