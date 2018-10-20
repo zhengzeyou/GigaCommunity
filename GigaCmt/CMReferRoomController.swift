@@ -9,8 +9,8 @@
 import UIKit
 
 class CMReferRoomController: BaseController {
-	let rightBtn:UIButton = UIButton(type: .custom)
-	let table:CMReferRoomMainTable = CMReferRoomMainTable()
+	var rightBtn:UIButton?
+	var table:CMReferRoomMainTable?
  	var pop:CMReferRoomNewFileView?
 	var submitBtn:UIButton?
 
@@ -20,9 +20,9 @@ class CMReferRoomController: BaseController {
 		addTableView();
 	}
 	private func addTableView(){
-		
-		self.view.addSubview(table)
- 		table.snp.makeConstraints { (make) in
+		self.table = CMReferRoomMainTable(frame: .zero)
+		self.view.addSubview(table!)
+		table?.snp.makeConstraints { (make) in
 			make.edges.equalToSuperview()
  		}
 	}
@@ -34,19 +34,20 @@ class CMReferRoomController: BaseController {
 		leftBtn.setImage(UIImage(named: "icon_upload")?.withRenderingMode(.alwaysOriginal), for: .normal)
 		self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: leftBtn)
 
-		rightBtn.addTarget(self, action:  #selector(rightFunc), for: .touchUpInside)
-		rightBtn.setImage(UIImage(named: "icon_more_operation")?.withRenderingMode(.alwaysOriginal), for: .normal)
-		rightBtn.setImage(UIImage(named: "icon_close_operation")?.withRenderingMode(.alwaysOriginal), for: .selected)
- 		self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: rightBtn)
+		rightBtn = UIButton(type: .custom)
+		rightBtn?.addTarget(self, action:  #selector(rightFunc), for: .touchUpInside)
+		rightBtn?.setImage(UIImage(named: "icon_more_operation")?.withRenderingMode(.alwaysOriginal), for: .normal)
+		rightBtn?.setImage(UIImage(named: "icon_close_operation")?.withRenderingMode(.alwaysOriginal), for: .selected)
+		self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: rightBtn!)
  
 	}
 	
 	@objc private func leftFunc(sender:UIButton){
 		
-		rightBtn.isSelected = false
+		rightBtn?.isSelected = false
 		sender.isSelected = !sender.isSelected
 		pop?.hiddeSuv()
-		table.setEditState(state: sender.isSelected)
+		table?.setEditState(state: sender.isSelected)
 		
 		if sender.isSelected {
  			submitBtn = UIButton(type: .custom)
@@ -86,14 +87,14 @@ class CMReferRoomController: BaseController {
 	
 	@objc private func rightFunc(sender:UIButton){
  		sender.isSelected = !sender.isSelected
-		let boundframe:CGRect = rightBtn.convert(rightBtn.bounds, to: (UIApplication.shared.delegate?.window)!)
+		let boundframe:CGRect = rightBtn!.convert((rightBtn?.bounds)!, to: (UIApplication.shared.delegate?.window)!)
 
 		switch sender.isSelected {
 		case true:
 			pop = CMReferRoomNewFileView(frame: CGRect(x: 0, y: boundframe.origin.y+boundframe.height+8, width: Constant.screenWidth, height: Constant.screenWidth/2.0))
 			(UIApplication.shared.delegate?.window)!?.addSubview(pop!)
 			pop?.tapCoverMap = { 
-				self.rightBtn.isSelected = false
+				self.rightBtn?.isSelected = false
 			}
 			
 			pop?.uploadMap = {  (index:Int) in

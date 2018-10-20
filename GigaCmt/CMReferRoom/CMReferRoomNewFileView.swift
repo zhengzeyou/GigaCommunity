@@ -14,9 +14,8 @@ class CMReferRoomNewFileView: UIView {
 	var collectView:UICollectionView?
 	let icons:NSArray = ["icon_upload_img","icon_upload_video","icon_add_folder"]
 	let titles:NSArray = ["上传图片".localized(),"上传视频".localized(),"新建文件夹".localized()]
-	var uploadMap:(Int) -> Void = {
-		(index:Int) in
-	}
+	var uploadMap:((Int) -> Void)?
+	
 	override init(frame: CGRect) {
 		super.init(frame: frame)
 		addSubViews()
@@ -110,7 +109,7 @@ extension CMReferRoomNewFileView:UICollectionViewDelegate,UICollectionViewDelega
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-		self.uploadMap(indexPath.row)
+		self.uploadMap!(indexPath.row)
  	}
 	
 	

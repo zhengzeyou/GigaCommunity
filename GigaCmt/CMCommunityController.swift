@@ -12,7 +12,7 @@ import RxSwift
 
 class CMCommunityController: BaseController {
 
-	let cmScrollView:UIScrollView = UIScrollView()
+	var cmScrollView:UIScrollView?
 	var badge:UILabel?
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,7 +42,7 @@ class CMCommunityController: BaseController {
 		let cmTopSeg:CMTopSegView = CMTopSegView.init(frame: CGRect(x: 0, y: 0, width: 120, height: 40))
 		cmTopSeg.clickHeadIndexMap = {[weak self](index:CGFloat)->Void in
 			
-			self?.cmScrollView.contentOffset.x = index*Constant.screenWidth
+			self?.cmScrollView?.contentOffset.x = index*Constant.screenWidth
  
 		}
 		self.navigationItem.titleView = cmTopSeg
@@ -63,21 +63,22 @@ extension CMCommunityController:UIScrollViewDelegate{
 		UserDefaults.standard.set(self.tabBarController?.tabBar.height, forKey: "tabBarH")
 		UserDefaults.standard.synchronize()
  
-		cmScrollView.delegate = self
-		cmScrollView.isScrollEnabled = false
- 		cmScrollView.contentSize = CGSize(width: Constant.screenWidth*2, height: Constant.screenHeight)
-		view.addSubview(cmScrollView)
-  		cmScrollView.snp.makeConstraints { (make) in
+		cmScrollView = UIScrollView(frame: .zero)
+		cmScrollView?.delegate = self
+		cmScrollView?.isScrollEnabled = false
+ 		cmScrollView?.contentSize = CGSize(width: Constant.screenWidth*2, height: Constant.screenHeight)
+		view.addSubview(cmScrollView!)
+  		cmScrollView?.snp.makeConstraints { (make) in
 			make.edges.equalToSuperview()
  		}
 		
 		let tableHeight:CGFloat = Constant.screenHeight - (self.tabBarController?.tabBar.height)! - 10.0
 		
 		let jmTableview = CMJmTableView(frame: CGRect(x: 0, y: 0, width: Constant.screenWidth, height: tableHeight))
-		cmScrollView.addSubview(jmTableview)
+		cmScrollView?.addSubview(jmTableview)
 		
 		let perTableview = CMPerTableView(frame: CGRect(x: Constant.screenWidth, y: 0, width: Constant.screenWidth, height:tableHeight))
-		cmScrollView.addSubview(perTableview)
+		cmScrollView?.addSubview(perTableview)
 
  	}
 }

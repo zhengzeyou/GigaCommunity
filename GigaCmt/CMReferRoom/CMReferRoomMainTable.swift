@@ -85,7 +85,7 @@ extension CMReferRoomMainTable:UITableViewDelegate,UITableViewDataSource{
 		}
  		return cell
 	}
- 	func tableView(_ tableView: UITableView, didSelectRxowAt indexPath: IndexPath) {
+	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		print("on click")
 	}
 	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

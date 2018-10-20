@@ -12,9 +12,9 @@ import PhotoBrowserSwift
 class CMMypageReleaseController: BaseController {
 	var picCollectView:UICollectionView?
 	var dataArray:NSMutableArray = [""]
-	let statebg:UIView = UIView()
-	let privateBtn:UIButton = UIButton(type: .custom)
-	let publicBtn:UIButton = UIButton(type: .custom)
+	var statebg:UIView?
+	var privateBtn:UIButton?
+	var publicBtn:UIButton?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,45 +66,47 @@ class CMMypageReleaseController: BaseController {
 			make.height.equalTo(Constant.screenWidth/3.0)
 		})
 
-		
- 		self.view.addSubview(statebg)
-		statebg.snp.makeConstraints { (make) in
+		statebg = UIView(frame: .zero)
+ 		self.view.addSubview(statebg!)
+		statebg?.snp.makeConstraints { (make) in
 			make.top.equalTo((self.picCollectView?.snp.bottom)!)
 			make.left.right.equalToSuperview()
 			make.height.equalTo(40)
 		}
 		
-		privateBtn.addTarget(self, action: #selector(privatePublicaction), for: .touchUpInside)
-		privateBtn.layer.cornerRadius = 12.0
-		privateBtn.layer.masksToBounds = true
-		privateBtn.titleLabel?.font = UIFont.systemFont(ofSize: 14.0)
-		privateBtn.setBackgroundImage(UIImage(named: "normal"), for: .normal)
-		privateBtn.setBackgroundImage(UIImage(named: "selected"), for: .selected)
-   		privateBtn.setTitleColor(Constant.greyColor, for: .normal)
-		privateBtn.setTitleColor(Constant.vcBgColor, for: .selected)
-		privateBtn.setTitle("匿名".localized(), for: .normal)
-		statebg.addSubview(privateBtn)
-		privateBtn.snp.makeConstraints { (make) in
+		privateBtn = UIButton(frame: .zero)
+		privateBtn?.addTarget(self, action: #selector(privatePublicaction), for: .touchUpInside)
+		privateBtn?.layer.cornerRadius = 12.0
+		privateBtn?.layer.masksToBounds = true
+		privateBtn?.titleLabel?.font = UIFont.systemFont(ofSize: 14.0)
+		privateBtn?.setBackgroundImage(UIImage(named: "normal"), for: .normal)
+		privateBtn?.setBackgroundImage(UIImage(named: "selected"), for: .selected)
+   		privateBtn?.setTitleColor(Constant.greyColor, for: .normal)
+		privateBtn?.setTitleColor(Constant.vcBgColor, for: .selected)
+		privateBtn?.setTitle("匿名".localized(), for: .normal)
+		statebg?.addSubview(privateBtn!)
+		privateBtn?.snp.makeConstraints { (make) in
 			make.right.equalToSuperview().offset(-15)
 			make.centerY.equalToSuperview()
 			make.width.equalTo(50)
 			make.height.equalTo(24)
 		}
 		
-		publicBtn.addTarget(self, action: #selector(privatePublicaction), for: .touchUpInside)
- 		publicBtn.layer.cornerRadius = 12.0
-		publicBtn.layer.masksToBounds = true
-		publicBtn.isSelected = true
- 		publicBtn.titleLabel?.font = UIFont.systemFont(ofSize: 14.0)
-		publicBtn.setBackgroundImage(UIImage(named: "normal"), for: .normal)
-		publicBtn.setBackgroundImage(UIImage(named: "selected"), for: .selected)
- 		publicBtn.backgroundColor = UIColor.colorFromHex(hex: 0xf2f2f2)
-		publicBtn.setTitleColor(Constant.greyColor, for: .normal)
-		publicBtn.setTitleColor(Constant.vcBgColor, for: .selected)
-		publicBtn.setTitle("公开".localized(), for: .normal)
-		statebg.addSubview(publicBtn)
-		publicBtn.snp.makeConstraints { (make) in
-			make.right.equalTo(privateBtn.snp.left).offset(-10)
+		publicBtn = UIButton(frame: .zero)
+ 		publicBtn?.addTarget(self, action: #selector(privatePublicaction), for: .touchUpInside)
+ 		publicBtn?.layer.cornerRadius = 12.0
+		publicBtn?.layer.masksToBounds = true
+		publicBtn?.isSelected = true
+ 		publicBtn?.titleLabel?.font = UIFont.systemFont(ofSize: 14.0)
+		publicBtn?.setBackgroundImage(UIImage(named: "normal"), for: .normal)
+		publicBtn?.setBackgroundImage(UIImage(named: "selected"), for: .selected)
+ 		publicBtn?.backgroundColor = UIColor.colorFromHex(hex: 0xf2f2f2)
+		publicBtn?.setTitleColor(Constant.greyColor, for: .normal)
+		publicBtn?.setTitleColor(Constant.vcBgColor, for: .selected)
+		publicBtn?.setTitle("公开".localized(), for: .normal)
+		statebg?.addSubview(publicBtn!)
+		publicBtn?.snp.makeConstraints { (make) in
+			make.right.equalTo((privateBtn?.snp.left)!).offset(-10)
 			make.centerY.equalToSuperview()
 			make.width.equalTo(50)
 			make.height.equalTo(24)
@@ -114,8 +116,8 @@ class CMMypageReleaseController: BaseController {
 	}
 	
 	@objc private func privatePublicaction(sender:UIButton){
-		privateBtn.isSelected = false
-		publicBtn.isSelected = false
+		privateBtn?.isSelected = false
+		publicBtn?.isSelected = false
 		sender.isSelected = !sender.isSelected
 	}
 	

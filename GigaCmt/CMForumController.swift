@@ -14,7 +14,7 @@ class CMForumController: BaseController {
 	
 	
  	let titles:NSArray = ["所有讨论".localized(),"公开讨论".localized(),"匿名讨论".localized()]
-	let buttomLine:UILabel = UILabel()
+	var buttomLine:UILabel?
 	
 
     override func viewDidLoad() {
@@ -48,9 +48,10 @@ class CMForumController: BaseController {
  			make.height.equalTo( Constant.screenWidth/8.0)
 		})
 		
-		buttomLine.backgroundColor = Constant.blueColor
-		self.view.addSubview(buttomLine)
-		buttomLine.snp.makeConstraints { (make) in
+		buttomLine = UILabel(frame: .zero)
+		buttomLine?.backgroundColor = Constant.blueColor
+		self.view.addSubview(buttomLine!)
+		buttomLine?.snp.makeConstraints { (make) in
 			make.width.equalTo(60)
 			make.height.equalTo(2)
 			make.top.equalTo((headcollectView?.snp.bottom)!).offset(-4)
@@ -125,7 +126,7 @@ extension CMForumController:UICollectionViewDelegate,UICollectionViewDelegateFlo
 		
 		if collectionView.tag == 1001 {
 			let centerX:CGFloat = Constant.screenWidth / 6.0 + (CGFloat(indexPath.row) * (Constant.screenWidth/3.0))
-			buttomLine.snp.updateConstraints{ (make) in
+			buttomLine?.snp.updateConstraints{ (make) in
 				make.centerX.equalTo(centerX)
 			}
 			buttomcollectView?.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
@@ -141,7 +142,7 @@ extension CMForumController:UICollectionViewDelegate,UICollectionViewDelegateFlo
 		}
 		buttomcollectView?.scrollToItem(at: IndexPath(item: index, section: 0), at: .centeredHorizontally, animated: true)
 		let centerX:CGFloat = Constant.screenWidth/6.0 + (CGFloat(index) * (Constant.screenWidth/3.0))
-		buttomLine.snp.updateConstraints{ (make) in
+		buttomLine?.snp.updateConstraints{ (make) in
 			make.centerX.equalTo(centerX)
 		}
 		print(index)

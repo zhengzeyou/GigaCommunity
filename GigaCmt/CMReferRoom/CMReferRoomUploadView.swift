@@ -9,13 +9,12 @@
 import UIKit
 
 class CMReferRoomUploadView: UIView {
-	let cover:UIView = UIView()
+	var cover:UIView?
 	var loadbtn:UIButton?
 	var delbtn:UIButton?
  	let bg:UIImageView = UIImageView(image: UIImage(named: "upload")?.withRenderingMode(.alwaysOriginal))
-	var delCellMap:(Int) -> Void = {(index:Int) in
-		
-	}
+	var delCellMap:((Int) -> Void)?
+	
 	override init(frame: CGRect) {
 		super.init(frame: frame)
 		addSubViews()
@@ -27,12 +26,13 @@ class CMReferRoomUploadView: UIView {
 	
 	private func addSubViews(){
 		
-		cover.backgroundColor = Constant.blackColor
-		cover.alpha = 0.2
+		cover = UILabel(frame: .zero)
+		cover?.backgroundColor = Constant.blackColor
+		cover?.alpha = 0.2
 		let tap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(clickCover))
-		cover.addGestureRecognizer(tap)
-		(UIApplication.shared.delegate?.window)!?.addSubview(cover)
-		cover.snp.makeConstraints { (make) in
+		cover?.addGestureRecognizer(tap)
+		(UIApplication.shared.delegate?.window)!?.addSubview(cover!)
+		cover?.snp.makeConstraints { (make) in
 			make.edges.equalToSuperview()
 		}
  
@@ -70,7 +70,7 @@ class CMReferRoomUploadView: UIView {
 	
 	@objc private func uploadDel(sender:UIButton){
 		print("下载和删除")
-		self.delCellMap(self.tag)
+		self.delCellMap!(self.tag)
 		hiddeSuv()
 
 	}
@@ -80,8 +80,8 @@ class CMReferRoomUploadView: UIView {
  	}
 	
 	private func hiddeSuv(){
-		cover.isHidden = true
-		cover.removeFromSuperview()
+		cover?.isHidden = true
+		cover?.removeFromSuperview()
 		bg.isHidden = true
 		bg.removeFromSuperview()
 		self.removeFromSuperview()

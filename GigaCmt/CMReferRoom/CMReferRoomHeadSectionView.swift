@@ -10,12 +10,11 @@ import UIKit
 
 class CMReferRoomHeadSectionView: UIButton {
 	
-	let title:UILabel = UILabel()
-	let switchOn:UIButton = UIButton(type: .custom)
-	let icon:UIImageView = UIImageView(image: UIImage(named: "icon_folder")?.withRenderingMode(.alwaysOriginal))
-	var allChoiceMap:(Bool) -> Void = {
-		(isBool:Bool) in
-	}
+	var title:UILabel?
+	var	switchOn:UIButton?
+	var icon:UIImageView?
+	var allChoiceMap:((Bool) -> Void)?
+	
 	override init(frame: CGRect) {
 		super.init(frame: frame)
 		addSubViews()
@@ -38,23 +37,23 @@ class CMReferRoomHeadSectionView: UIButton {
 			make.centerY.equalToSuperview()
 		}
 		
-		
- 		self.addSubview(icon)
- 		icon.snp.makeConstraints { (make) in
+		icon = UIImageView(image: UIImage(named: "icon_folder")?.withRenderingMode(.alwaysOriginal))
+		self.addSubview(icon!)
+		icon?.snp.makeConstraints { (make) in
 			make.left.equalToSuperview().offset(10)
 			make.centerY.equalToSuperview()
  		}
-		
-		self.addSubview(title)
-		title.snp.makeConstraints { (make) in
-			make.left.equalTo(icon.snp.right).offset(8)
-			make.centerY.equalTo(icon.snp.centerY)
+		title = UILabel(frame: .zero)
+		self.addSubview(title!)
+		title?.snp.makeConstraints { (make) in
+			make.left.equalTo((icon?.snp.right)!).offset(8)
+			make.centerY.equalTo((icon?.snp.centerY)!)
 		}
-		
- 		switchOn.setImage(UIImage(named: "icon_open_folder")?.withRenderingMode(.alwaysOriginal), for: .normal)
-		switchOn.setImage(UIImage(named: "icon_close_folder")?.withRenderingMode(.alwaysOriginal), for: .selected)
-		self.addSubview(switchOn)
-		switchOn.snp.makeConstraints { (make) in
+		switchOn = UIButton(type: .custom)
+		switchOn?.setImage(UIImage(named: "icon_open_folder")?.withRenderingMode(.alwaysOriginal), for: .normal)
+		switchOn?.setImage(UIImage(named: "icon_close_folder")?.withRenderingMode(.alwaysOriginal), for: .selected)
+		self.addSubview(switchOn!)
+		switchOn?.snp.makeConstraints { (make) in
 			make.centerY.equalToSuperview()
 			make.right.equalToSuperview().offset(-15)
 		}
@@ -64,11 +63,11 @@ class CMReferRoomHeadSectionView: UIButton {
 	public func enableEdited(state:Bool){
 		
 		if state {
-			icon.snp.updateConstraints { (make) in
+			icon?.snp.updateConstraints { (make) in
 				make.left.equalTo(40)
 			}
 		}else{
-			icon.snp.updateConstraints { (make) in
+			icon?.snp.updateConstraints { (make) in
 				make.left.equalTo(10)
 			}
  		}
@@ -79,14 +78,14 @@ class CMReferRoomHeadSectionView: UIButton {
 
  	@objc private func check(sender:UIButton){
 		sender.isSelected = !sender.isSelected
-        self.allChoiceMap(sender.isSelected)
+		self.allChoiceMap!(sender.isSelected)
 	}
 	
 	public func switchOnFunc(selected:Bool){
- 		switchOn.isSelected = !switchOn.isSelected
+		switchOn?.isSelected = !(switchOn?.isSelected)!
 	}
 	
 	public func reloadData(filename:String){
-		title.text = filename
+		title?.text = filename
  	}
 }
