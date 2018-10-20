@@ -9,7 +9,7 @@
 import UIKit
 
 class CMReferRoomNewFileView: UIView {
-	var tapCoverMap = { }
+	var tapCoverMap:(() -> Void)?
  	let cover:UIView = UIView()
 	var collectView:UICollectionView?
 	let icons:NSArray = ["icon_upload_img","icon_upload_video","icon_add_folder"]
@@ -51,7 +51,7 @@ class CMReferRoomNewFileView: UIView {
 		collectView?.dataSource = self
 		collectView?.delegate = self
 		collectView?.showsHorizontalScrollIndicator = false
-		self.addSubview(collectView!)
+		self.addSubview(collectView ?? UICollectionView())
 		collectView?.snp.makeConstraints({ (make) in
 			make.edges.equalToSuperview()
 		})
@@ -66,7 +66,11 @@ class CMReferRoomNewFileView: UIView {
 		
 	}
 	@objc private func clickCover(){
-		self.tapCoverMap()
+		guard self.tapCoverMap != nil else {
+			return
+		}
+		self.tapCoverMap?()
+		
   		hiddeSuv()
 	}
 	
@@ -109,7 +113,10 @@ extension CMReferRoomNewFileView:UICollectionViewDelegate,UICollectionViewDelega
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-		self.uploadMap!(indexPath.row)
+		guard self.uploadMap != nil else {
+			return
+		}
+ 		self.uploadMap?(indexPath.row)
  	}
 	
 	

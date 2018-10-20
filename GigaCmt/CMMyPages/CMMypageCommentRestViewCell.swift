@@ -10,8 +10,8 @@ import UIKit
 
 class CMMypageCommentRestViewCell: UITableViewCell {
 	var content:UILabel?
-	let delbtn:UIButton = UIButton(type: .custom)
-	var deleCommentCellMap:(Int) -> Void = {_ in }
+	var delbtn:UIButton?
+	var deleCommentCellMap:((Int) -> Void)?
 
 	override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
 		super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -66,16 +66,17 @@ class CMMypageCommentRestViewCell: UITableViewCell {
 			make.right.equalToSuperview().offset(-15)
  		}
 		
-		delbtn.tag = self.tag
-		delbtn.layer.cornerRadius = 15
- 		delbtn.addTarget(self, action: #selector(deleteFunc), for: .touchUpInside)
- 		delbtn.layer.masksToBounds = true
-		delbtn.titleLabel?.font = .systemFont(ofSize: 14.0)
-		delbtn.setTitle("删除".localized(), for: .normal)
-		delbtn.setTitleColor(Constant.greyColor, for: .normal)
-		delbtn.backgroundColor = UIColor.colorFromHex(hex: 0xf2f2f2)
-		self.contentView.addSubview(delbtn)
-		delbtn.snp.makeConstraints { (make) in
+		delbtn = UIButton(type: .custom)
+		delbtn?.tag = self.tag
+		delbtn?.layer.cornerRadius = 15
+ 		delbtn?.addTarget(self, action: #selector(deleteFunc), for: .touchUpInside)
+ 		delbtn?.layer.masksToBounds = true
+		delbtn?.titleLabel?.font = .systemFont(ofSize: 14.0)
+		delbtn?.setTitle("删除".localized(), for: .normal)
+		delbtn?.setTitleColor(Constant.greyColor, for: .normal)
+		delbtn?.backgroundColor = UIColor.colorFromHex(hex: 0xf2f2f2)
+		self.contentView.addSubview(delbtn!)
+		delbtn?.snp.makeConstraints { (make) in
 			make.centerY.equalTo(avator.snp.centerY)
 			make.right.equalToSuperview().offset(-15)
 			make.width.equalTo(60)
@@ -84,7 +85,12 @@ class CMMypageCommentRestViewCell: UITableViewCell {
 	}
 	
 	@objc private func deleteFunc(sender:UIButton){
-		deleCommentCellMap(sender.tag)
+		guard self.deleCommentCellMap != nil else {
+			
+			return
+		}
+		deleCommentCellMap?(sender.tag)
+
 	}
 	
 

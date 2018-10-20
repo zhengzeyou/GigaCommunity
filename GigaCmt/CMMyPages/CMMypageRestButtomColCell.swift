@@ -7,13 +7,13 @@
 //
 
 import UIKit
-import NVActivityIndicatorView
-class CMMypageRestButtomColCell: UICollectionViewCell,NVActivityIndicatorViewable {
+class CMMypageRestButtomColCell: UICollectionViewCell {
 	var tableview:UITableView?
 	var input:CMMypageInputView?
-	var dataMutableArray:NSMutableArray = ["为了gigakorea大家一起工作加油奋斗！！","为了gigakorea大家一起工作加油奋斗！！","为了gigakorea大家一起工作加油奋斗！！为了gigakorea大家一起工作加油奋斗！！","为了gigakorea大家一起工作加油奋斗！！","为了gigakorea大家一起工作加油奋斗！！"]
+	var dataMutableArray:NSMutableArray?
  	override init(frame: CGRect) {
   		super.init(frame: frame)
+
 		addSubViews()
 	}
 	required init?(coder aDecoder: NSCoder) {
@@ -30,11 +30,12 @@ class CMMypageRestButtomColCell: UICollectionViewCell,NVActivityIndicatorViewabl
 		tableview?.dataSource = self
 		tableview?.register(CMMypageCommentRestViewCell.self, forCellReuseIdentifier: "cellID")
 		tableview?.estimatedRowHeight = 0
- 		self.contentView.addSubview(tableview!)
+ 		self.contentView.addSubview(tableview ?? UITableView())
 		tableview?.snp.makeConstraints({ (make) in
 
 			make.edges.equalToSuperview()
 		})
+  		self.dataMutableArray = ["为了gigakorea大家一起工作加油奋斗！！","为了gigakorea大家一起工作加油奋斗！！","为了gigakorea大家一起工作加油奋斗！！为了gigakorea大家一起工作加油奋斗！！","为了gigakorea大家一起工作加油奋斗！！","为了gigakorea大家一起工作加油奋斗！！"]
  	}
 }
 
@@ -47,20 +48,16 @@ extension CMMypageRestButtomColCell{
 		})
 		
 		input = CMMypageInputView()
-//		let activity:NVActivityIndicatorView = NVActivityIndicatorView(frame: CGRect(x: Constant.screenWidth/2 - 50, y: Constant.screenHeight/2 - 20, width: 100, height: 40), type: NVActivityIndicatorType.ballClipRotatePulse, color: UIColor.brown, padding: 1)
-// 		(UIApplication.shared.delegate?.window)!?.addSubview(activity)
-		
-		let activityData:ActivityData = ActivityData(size: CGSize(width: 100, height: 40), message: "请输入内容", messageFont: UIFont.systemFont(ofSize: 16), messageSpacing: 1, type: NVActivityIndicatorType.ballScale, color: UIColor.brown, padding: 1, displayTimeThreshold: 1, minimumDisplayTime: 1, backgroundColor: UIColor.purple, textColor: UIColor.black)
-		input?.sendReleaseMap = {(content:String) in
+ 		input?.sendReleaseMap = {(content:String) in
  
 			if content.count == 0 {
-//				NVActivityIndicatorPresenter.sharedInstance.startAnimating(activityData, { (view) in })
-//				activity.startAnimating()
+ 
+				
 			}else {
 				
-				self.dataMutableArray.add(content)
+				self.dataMutableArray?.add(content)
 				self.tableview?.reloadData()
-				self.tableview?.scrollToRow(at: IndexPath(row:self.dataMutableArray.count - 1, section: 0), at: .bottom, animated: true)
+				self.tableview?.scrollToRow(at: IndexPath(row:(self.dataMutableArray?.count)! - 1, section: 0), at: .bottom, animated: true)
 				
 			}
  
@@ -74,15 +71,15 @@ extension CMMypageRestButtomColCell{
  }
 extension CMMypageRestButtomColCell : UITableViewDelegate,UITableViewDataSource {
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return self.dataMutableArray.count
+		return (self.dataMutableArray?.count)!
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		
 		let cell:CMMypageCommentRestViewCell = tableView.dequeueReusableCell(withIdentifier: "cellID", for: indexPath) as! CMMypageCommentRestViewCell
-  		cell.setCellData(data: (self.dataMutableArray.object(at: indexPath.row) as? String)!)
+		cell.setCellData(data: (self.dataMutableArray?.object(at: indexPath.row) as? String)!)
  		cell.deleCommentCellMap = { _ in
-  			self.dataMutableArray.removeObject(at: indexPath.row)
+			self.dataMutableArray?.removeObject(at: indexPath.row)
  			self.tableview?.reloadData()
 		}
 
@@ -90,7 +87,7 @@ extension CMMypageRestButtomColCell : UITableViewDelegate,UITableViewDataSource 
 	}
 	
 	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-		let contentString:String = ((self.dataMutableArray.object(at: indexPath.row) as? String)!)
+		let contentString:String = ((self.dataMutableArray?.object(at: indexPath.row) as? String)!)
 		let height:CGFloat = self.getTextHeigh(textStr: contentString, font: .systemFont(ofSize: 16), width: Constant.screenWidth - 88.0)
 		return 80.0 + height
 	}

@@ -43,7 +43,7 @@ class CMMypageMainTableCell: UITableViewCell {
 		headcollectView?.layer.borderColor = UIColor.colorFromHex(hex: 0xeeeeee).cgColor
 		headcollectView?.layer.borderWidth = 0.6
 		headcollectView?.showsHorizontalScrollIndicator = false
-		self.contentView.addSubview(headcollectView!)
+		self.contentView.addSubview(headcollectView ?? UICollectionView())
 		headcollectView?.snp.makeConstraints({ (make) in
 			make.left.top.right.equalToSuperview()
 			make.height.equalTo( Constant.screenWidth/4.0 + 20.0)
@@ -78,7 +78,7 @@ class CMMypageMainTableCell: UITableViewCell {
 		buttomcollectView?.dataSource = self
 		buttomcollectView?.delegate = self
  		buttomcollectView?.showsHorizontalScrollIndicator = false
-		self.contentView.addSubview(buttomcollectView!)
+		self.contentView.addSubview(buttomcollectView ?? UICollectionView())
 		buttomcollectView?.snp.makeConstraints({ (make) in
 			make.left.bottom.right.equalToSuperview()
 			make.top.equalTo((headcollectView?.snp.bottom)!)

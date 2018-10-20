@@ -11,9 +11,7 @@ import UIKit
 class CMForumController: BaseController {
 	var headcollectView:UICollectionView?
 	var buttomcollectView:UICollectionView?
-	
-	
- 	let titles:NSArray = ["所有讨论".localized(),"公开讨论".localized(),"匿名讨论".localized()]
+  	let titles:NSArray = ["所有讨论".localized(),"公开讨论".localized(),"匿名讨论".localized()]
 	var buttomLine:UILabel?
 	
 

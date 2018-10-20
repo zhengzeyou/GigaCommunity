@@ -11,7 +11,7 @@ import UIKit
 class CMMypageAddressListButtomColCell: UICollectionViewCell {
 	var tableview:UITableView?
 	var dataSources:NSMutableArray?
-	var isSelecteds:NSMutableArray?
+	var isSelecteds:NSMutableArray = [Bool]() as! NSMutableArray
 
 	override init(frame: CGRect) {
 		super.init(frame: frame)
@@ -34,7 +34,7 @@ class CMMypageAddressListButtomColCell: UICollectionViewCell {
 		tableview?.estimatedSectionHeaderHeight = 0
 		tableview?.tableFooterView = UIView()
 		tableview?.register(CMMypageAddListButtomSectionTableCell.self, forCellReuseIdentifier: "reused")
-		self.contentView.addSubview(tableview!)
+		self.contentView.addSubview(tableview ?? UITableView())
 		tableview?.snp.makeConstraints({ (make) in
 			make.edges.equalToSuperview()
 		})
@@ -51,7 +51,7 @@ class CMMypageAddressListButtomColCell: UICollectionViewCell {
 extension CMMypageAddressListButtomColCell:UITableViewDelegate,UITableViewDataSource{
 	
 	func numberOfSections(in tableView: UITableView) -> Int {
-		return (self.dataSources?.count)!
+		return (self.dataSources?.count ?? 0)
 	}
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -72,11 +72,11 @@ extension CMMypageAddressListButtomColCell:UITableViewDelegate,UITableViewDataSo
 		let sectionView:CMMypageAddListButtomSectionView = CMMypageAddListButtomSectionView()
 		sectionView.IsOpenMap = {(isBool:Bool) in
 			
-			self.isSelecteds?.replaceObject(at: section, with: !(self.isSelecteds![section] as! Bool))
-			self.dataSources?.replaceObject(at: section, with: ((self.isSelecteds![section] as! Bool) ? 0 : 4))
+			self.isSelecteds.replaceObject(at: section, with: !(self.isSelecteds[section] as! Bool))
+			self.dataSources?.replaceObject(at: section, with: ((self.isSelecteds[section] as! Bool) ? 0 : 4))
 			self.tableview?.reloadSections(IndexSet(integer: section), with: .automatic)
  		}
-		sectionView.setCurrentState(current: (self.isSelecteds![section] as! Bool))
+		sectionView.setCurrentState(current: (self.isSelecteds[section] as! Bool))
 		
 		return sectionView
 	}

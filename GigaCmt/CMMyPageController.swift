@@ -10,6 +10,7 @@ import UIKit
 
 class CMMyPageController: BaseController {
  	var tableview:CMMypageMainTable?
+	
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
 		self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)

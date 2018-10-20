@@ -59,7 +59,7 @@ class CMMypageReleaseController: BaseController {
 		picCollectView?.dataSource = self
 		picCollectView?.delegate = self
  		picCollectView?.showsHorizontalScrollIndicator = false
-		self.view.addSubview(picCollectView!)
+		self.view.addSubview(picCollectView ?? UICollectionView())
 		picCollectView?.snp.makeConstraints({ (make) in
 			make.left.right.equalToSuperview()
 			make.top.equalTo(text.snp.bottom)
@@ -84,7 +84,7 @@ class CMMypageReleaseController: BaseController {
    		privateBtn?.setTitleColor(Constant.greyColor, for: .normal)
 		privateBtn?.setTitleColor(Constant.vcBgColor, for: .selected)
 		privateBtn?.setTitle("匿名".localized(), for: .normal)
-		statebg?.addSubview(privateBtn!)
+		statebg?.addSubview(privateBtn ?? UIButton())
 		privateBtn?.snp.makeConstraints { (make) in
 			make.right.equalToSuperview().offset(-15)
 			make.centerY.equalToSuperview()
@@ -104,7 +104,7 @@ class CMMypageReleaseController: BaseController {
 		publicBtn?.setTitleColor(Constant.greyColor, for: .normal)
 		publicBtn?.setTitleColor(Constant.vcBgColor, for: .selected)
 		publicBtn?.setTitle("公开".localized(), for: .normal)
-		statebg?.addSubview(publicBtn!)
+		statebg?.addSubview(publicBtn ?? UIButton())
 		publicBtn?.snp.makeConstraints { (make) in
 			make.right.equalTo((privateBtn?.snp.left)!).offset(-10)
 			make.centerY.equalToSuperview()

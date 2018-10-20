@@ -11,9 +11,7 @@ import UIKit
 class CMMypageAddListButtomSectionView: UIButton {
 
 	var arrow:UIButton?
-	var IsOpenMap:(Bool) -> Void = {
-		(isBool:Bool) in
-	}
+	var IsOpenMap:((Bool) -> Void)?
 
 	override init(frame: CGRect) {
 		super.init(frame: frame)
@@ -63,6 +61,10 @@ class CMMypageAddListButtomSectionView: UIButton {
 	
 	@objc private func arrowFunc(sender:UIButton){
 		arrow?.isSelected = !(arrow?.isSelected)!
-		self.IsOpenMap((arrow?.isSelected)!)
+		
+		guard self.IsOpenMap != nil else {
+			return
+		}
+		self.IsOpenMap?((arrow?.isSelected)!)
 	}
 }

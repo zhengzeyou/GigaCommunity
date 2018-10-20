@@ -106,7 +106,11 @@ class CMReferRoomFileTableCell: UITableViewCell {
 		uploadPopView.setType(titles: ["下载".localized(),"删除".localized()])
  		uploadPopView.tag = self.tag
 		uploadPopView.delCellMap = { (index:Int) in
-			self.delCellMap!(index)
+			guard self.delCellMap != nil else {
+				
+				return
+			}
+ 			self.delCellMap?(index)
 
 		}
 		(UIApplication.shared.delegate?.window)!?.addSubview(uploadPopView)

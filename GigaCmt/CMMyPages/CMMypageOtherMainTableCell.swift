@@ -11,10 +11,9 @@ import UIKit
 class CMMypageOtherMainTableCell: UITableViewCell {
 	var headcollectView:UICollectionView?
 	var buttomcollectView:UICollectionView?
-	
-	let icons:NSArray = ["icon_my_moment","icon_message_board"]
+ 	let icons:NSArray = ["icon_my_moment","icon_message_board"]
 	let titles:NSArray = ["他的发布".localized(),"留言板".localized()]
-	let buttomLine:UILabel = UILabel()
+	var buttomLine:UILabel?
 	
 	override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
 		super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -42,15 +41,16 @@ class CMMypageOtherMainTableCell: UITableViewCell {
 		headcollectView?.layer.borderColor = UIColor.colorFromHex(hex: 0xeeeeee).cgColor
 		headcollectView?.layer.borderWidth = 0.6
 		headcollectView?.showsHorizontalScrollIndicator = false
-		self.contentView.addSubview(headcollectView!)
+		self.contentView.addSubview(headcollectView ?? UICollectionView())
 		headcollectView?.snp.makeConstraints({ (make) in
 			make.left.top.right.equalToSuperview()
 			make.height.equalTo( Constant.screenWidth/4.0 + 20.0)
 		})
 		
-		buttomLine.backgroundColor = Constant.blackColor
-		self.addSubview(buttomLine)
-		buttomLine.snp.makeConstraints { (make) in
+		buttomLine = UILabel(frame: .zero)
+		buttomLine?.backgroundColor = Constant.blackColor
+		self.addSubview(buttomLine ?? UILabel())
+		buttomLine?.snp.makeConstraints { (make) in
 			make.width.equalTo(50)
 			make.height.equalTo(2)
 			make.top.equalTo((headcollectView?.snp.bottom)!).offset(-4)
@@ -74,7 +74,7 @@ class CMMypageOtherMainTableCell: UITableViewCell {
 		buttomcollectView?.dataSource = self
 		buttomcollectView?.delegate = self
 		buttomcollectView?.showsHorizontalScrollIndicator = false
-		self.contentView.addSubview(buttomcollectView!)
+		self.contentView.addSubview(buttomcollectView ?? UICollectionView())
 		buttomcollectView?.snp.makeConstraints({ (make) in
 			make.left.bottom.right.equalToSuperview()
 			make.top.equalTo((headcollectView?.snp.bottom)!)
@@ -143,7 +143,7 @@ extension CMMypageOtherMainTableCell:UICollectionViewDelegate,UICollectionViewDe
 		
 		if collectionView.tag == 1001 {
 			let centerX:CGFloat = Constant.screenWidth / 4.0 + (CGFloat(indexPath.row) * (Constant.screenWidth/2.0))
-			buttomLine.snp.updateConstraints{ (make) in
+			buttomLine?.snp.updateConstraints{ (make) in
 				make.centerX.equalTo(centerX)
 			}
 			buttomcollectView?.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
@@ -159,7 +159,7 @@ extension CMMypageOtherMainTableCell:UICollectionViewDelegate,UICollectionViewDe
 		}
 		buttomcollectView?.scrollToItem(at: IndexPath(item: index, section: 0), at: .centeredHorizontally, animated: true)
 		let centerX:CGFloat = Constant.screenWidth/4.0 + (CGFloat(index) * (Constant.screenWidth/2.0))
-		buttomLine.snp.updateConstraints{ (make) in
+		buttomLine?.snp.updateConstraints{ (make) in
 			make.centerX.equalTo(centerX)
 		}
 		print(index)

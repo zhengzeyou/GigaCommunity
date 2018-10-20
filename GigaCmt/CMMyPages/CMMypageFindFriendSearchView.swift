@@ -10,7 +10,6 @@ import UIKit
 
 class CMMypageFindFriendSearchView: UIView {
 
-
 	override init(frame: CGRect) {
 		super.init(frame: frame)
 		addSubViews()

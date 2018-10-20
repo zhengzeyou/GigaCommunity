@@ -78,7 +78,11 @@ class CMReferRoomHeadSectionView: UIButton {
 
  	@objc private func check(sender:UIButton){
 		sender.isSelected = !sender.isSelected
-		self.allChoiceMap!(sender.isSelected)
+		guard self.allChoiceMap != nil else {
+			
+			return
+		}
+ 		self.allChoiceMap?(sender.isSelected)
 	}
 	
 	public func switchOnFunc(selected:Bool){

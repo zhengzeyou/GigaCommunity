@@ -9,8 +9,8 @@
 import UIKit
 
 class CMMypageInputView: UIView {
-	var input:UITextField = UITextField()
-	var sendReleaseMap:(String) -> Void = {(content:String) in}
+	var input:UITextField?
+	var sendReleaseMap:((String) -> Void)?
 
 	override init(frame: CGRect) {
 		super.init(frame: frame)
@@ -28,12 +28,13 @@ class CMMypageInputView: UIView {
 	}
 	
 	private func addSubViews(){
- 		input.borderStyle = .roundedRect
-		input.delegate = self
-		input.placeholder = "给朋友说点什么吧~~".localized()
- 		input.backgroundColor = UIColor.colorFromHex(hex: 0xe2e2e2)
-		self.addSubview(input)
-		input.snp.makeConstraints { (make) in
+		input = UITextField(frame: .zero)
+ 		input?.borderStyle = .roundedRect
+		input?.delegate = self
+		input?.placeholder = "给朋友说点什么吧~~".localized()
+ 		input?.backgroundColor = UIColor.colorFromHex(hex: 0xe2e2e2)
+		self.addSubview(input!)
+		input?.snp.makeConstraints { (make) in
 			make.top.left.equalTo(10)
 			make.bottom.equalTo(-10)
 			make.right.equalTo(-90)
@@ -48,8 +49,8 @@ class CMMypageInputView: UIView {
 		sendBtn.setTitleColor(Constant.vcBgColor, for: .normal)
 		self.addSubview(sendBtn)
 		sendBtn.snp.makeConstraints { (make) in
-			make.top.bottom.equalTo(input)
-			make.left.equalTo(input.snp.right).offset(10)
+			make.top.bottom.equalTo(input!)
+			make.left.equalTo((input?.snp.right)!).offset(10)
 			make.right.equalToSuperview().offset(-10)
 		}
 	}
@@ -57,9 +58,13 @@ class CMMypageInputView: UIView {
 
 	@objc private func sendAction(sender:UIButton){
 		
-		self.sendReleaseMap(input.text!)
-		input.text = ""
- 		self.input.resignFirstResponder()
+		guard self.sendReleaseMap != nil else {
+			return
+		}
+		self.sendReleaseMap?(input!.text!)
+		
+		input?.text = ""
+ 		self.input?.resignFirstResponder()
 
 	}
 	
@@ -85,7 +90,7 @@ class CMMypageInputView: UIView {
 
 extension CMMypageInputView:UITextFieldDelegate{
 	func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-		self.input.resignFirstResponder()
+		self.input?.resignFirstResponder()
 		return true
 		
 	}

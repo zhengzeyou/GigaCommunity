@@ -70,7 +70,11 @@ class CMReferRoomUploadView: UIView {
 	
 	@objc private func uploadDel(sender:UIButton){
 		print("下载和删除")
-		self.delCellMap!(self.tag)
+		guard self.delCellMap != nil else {
+ 			return
+		}
+		self.delCellMap?(self.tag)
+		
 		hiddeSuv()
 
 	}

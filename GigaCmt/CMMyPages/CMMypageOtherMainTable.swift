@@ -28,7 +28,7 @@ class CMMypageOtherMainTable: UIView {
 		table?.estimatedSectionFooterHeight = 0
 		table?.estimatedSectionHeaderHeight = 0
 		table?.tableFooterView = UIView()
-		self.addSubview(table!)
+		self.addSubview(table ?? UITableView())
 		table?.snp.makeConstraints({ (make) in
 			make.edges.equalToSuperview()
 		})

@@ -9,8 +9,7 @@
 import UIKit
 
 class CMMypageFindFriendButtomColCell: UICollectionViewCell {
- 	var collectView:UICollectionView?
-	var dataArray:NSMutableArray = ["","","","","",""]
+ 	var dataArray:NSMutableArray = ["","","","","",""]
 
 	override init(frame: CGRect) {
 		super.init(frame: frame)
@@ -36,15 +35,15 @@ class CMMypageFindFriendButtomColCell: UICollectionViewCell {
 		flowlayout.minimumLineSpacing = 15
 		flowlayout.minimumInteritemSpacing = 15
 		
-		collectView = UICollectionView(frame: CGRect(x: 0, y: 170, width: Constant.screenWidth, height: 250), collectionViewLayout: flowlayout)
-		collectView?.backgroundColor =  Constant.vcBgColor
-		collectView?.showsVerticalScrollIndicator = false
-		collectView?.isScrollEnabled = false
-		collectView?.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "reused")
-		collectView?.dataSource = self
-		collectView?.delegate = self
-		collectView?.showsHorizontalScrollIndicator = false
-		scroll.addSubview(collectView!)
+		let collectView:UICollectionView = UICollectionView(frame: CGRect(x: 0, y: 170, width: Constant.screenWidth, height: 250), collectionViewLayout: flowlayout)
+		collectView.backgroundColor =  Constant.vcBgColor
+		collectView.showsVerticalScrollIndicator = false
+		collectView.isScrollEnabled = false
+		collectView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "reused")
+		collectView.dataSource = self
+		collectView.delegate = self
+		collectView.showsHorizontalScrollIndicator = false
+		scroll.addSubview(collectView)
   	}
 }
 

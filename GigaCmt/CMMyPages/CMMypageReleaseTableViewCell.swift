@@ -76,7 +76,7 @@ class CMMypageReleaseTableViewCell: UITableViewCell {
 		picCollectView?.dataSource = self
 		picCollectView?.delegate = self
 		picCollectView?.showsHorizontalScrollIndicator = false
-		self.contentView.addSubview(picCollectView!)
+		self.contentView.addSubview(picCollectView ?? UICollectionView())
 		
 		var sections:Int?
 		sections = Int(self.dataArray.count / 3)

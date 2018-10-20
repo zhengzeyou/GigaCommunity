@@ -12,10 +12,7 @@ class CMForumCommentTableViewCell: UITableViewCell {
 	let content:UILabel = UILabel()
 	let btn:UIButton = UIButton(type: .custom)
 	let avator:UIImageView = UIImageView()
-	var delCellMap:(Int) -> Void = {(index:Int) in
-		
-	}
-
+	var delCellMap:((Int) -> Void )?
 	override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
 		super.init(style: style, reuseIdentifier: reuseIdentifier)
 		addSubViews()
@@ -111,7 +108,10 @@ class CMForumCommentTableViewCell: UITableViewCell {
 		uploadPopView.setType(titles: ["修改".localized(),"删除".localized()])
 		uploadPopView.tag = self.tag
 		uploadPopView.delCellMap = { (index:Int) in
-			self.delCellMap(index)
+			guard self.delCellMap != nil else {
+				return
+			}
+			self.delCellMap?(index)
 			
 		}
 		(UIApplication.shared.delegate?.window)!?.addSubview(uploadPopView)

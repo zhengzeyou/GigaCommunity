@@ -32,7 +32,7 @@ class CMCommunityController: BaseController {
 		badge?.layer.cornerRadius = 6
 		badge?.layer.masksToBounds = true
 		badge?.backgroundColor = UIColor.red
-		rightbtn.addSubview(badge!)
+		rightbtn.addSubview(badge ?? UILabel())
 		badge?.snp.makeConstraints { (make) in
 			make.top.equalToSuperview().offset(-2)
 			make.width.height.equalTo(12)

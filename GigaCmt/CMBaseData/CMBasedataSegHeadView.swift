@@ -38,7 +38,7 @@ enum orientations:Int {
 
 class CMBasedataSegHeadView: UIView {
 	
-	var clickHeadIndexMap:(CGFloat)->Void = {(index:CGFloat)->Void in }
+	var clickHeadIndexMap:((CGFloat)->Void)?
 	
 	override init(frame: CGRect) {
 		super.init(frame: frame)
@@ -118,7 +118,12 @@ extension CMBasedataSegHeadView{
 		jms?.isSelected = false
 		pers?.isSelected = false
 		sender.isSelected = true
-		self.clickHeadIndexMap(CGFloat(sender.tag))
+		
+		guard self.clickHeadIndexMap != nil else {
+			return
+		}
+		self.clickHeadIndexMap?(CGFloat(sender.tag))
+		
 		switch sender.tag {
 			
 		case orientations.left.rawValue:

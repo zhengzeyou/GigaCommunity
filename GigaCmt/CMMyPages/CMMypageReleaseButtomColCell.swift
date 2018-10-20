@@ -28,7 +28,7 @@ class CMMypageReleaseButtomColCell: UICollectionViewCell {
 		tableview?.estimatedSectionHeaderHeight = 0
 		tableview?.delegate = self
 		tableview?.dataSource = self
-		self.contentView.addSubview(tableview!)
+		self.contentView.addSubview(tableview ?? UITableView())
 		tableview?.snp.makeConstraints({ (make) in
 			make.edges.equalToSuperview()
 		})
