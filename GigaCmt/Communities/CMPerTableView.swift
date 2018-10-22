@@ -17,7 +17,7 @@ enum Category:Int {
 		self.init(rawValue:offset)!
 	}
 	
-	var Cell:UITableViewCell? {
+	var Cell:UITableViewCell{
 		switch self {
 		case .star:
 			do {
@@ -76,11 +76,11 @@ extension CMPerTableView: UITableViewDelegate ,UITableViewDataSource {
 		
 		switch indexPath.row {
 		case Category.star.rawValue:
-			return Category.star.Cell!
+			return Category.star.Cell
 		case Category.month.rawValue:
-			return Category.month.Cell!
+			return Category.month.Cell
 		case Category.area.rawValue:
-			return Category.area.Cell!
+			return Category.area.Cell
 		default:
 			return UITableViewCell()
 		}

@@ -17,7 +17,7 @@ enum CellCategory:Int {
 		self.init(rawValue:offset)!
 	}
 	
-	var Cell:UITableViewCell? {
+	var Cell:UITableViewCell {
 		switch self {
 		case .star:
 			do {
@@ -82,11 +82,11 @@ extension CMJmTableView: UITableViewDelegate ,UITableViewDataSource {
 
 		switch indexPath.row {
 		case CellCategory.star.rawValue:
- 			return CellCategory.star.Cell!
+			return CellCategory.star.Cell
 		case CellCategory.league.rawValue:
-			return CellCategory.league.Cell!
+			return CellCategory.league.Cell
 		case CellCategory.area.rawValue:
-			return CellCategory.area.Cell!
+			return CellCategory.area.Cell
  		default:
 			return UITableViewCell()
 		}

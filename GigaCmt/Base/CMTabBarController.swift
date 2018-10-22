@@ -55,7 +55,7 @@ class CMTabBarController: UITabBarController {
 		}
 
 		
-		var title:String?{
+		var title:String{
 			switch self {
 			case .community:
  				return "社区".localized()
