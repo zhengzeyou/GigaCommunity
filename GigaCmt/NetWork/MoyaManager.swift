@@ -9,13 +9,12 @@
 import UIKit
 import Moya
 import RxSwift
- 
-
-var BaseURL:String = "http://www.baidu.com/"
+  public typealias JSONDictionary = [String: Any]
 
 enum MoyaManager {
 	
-	case login(username:String,password:String)
+	case login(account:String,pwd:String)
+	case mainData(language:String,token:String,customcode:String)
 	
 }
 
@@ -23,17 +22,16 @@ enum MoyaManager {
 extension MoyaManager:TargetType{
 	
 	var baseURL: URL {
-		
-		return URL.init(string: BaseURL)!
+		return URL(string: Constant.mallBaseUrl)!
 	}
 	
-	//请求路径
-	var path:String{
+ 	var path:String{
 		
 		switch self {
-		case .login(username: _, password:_):
-			return "login/accountLogin"
-			
+		case .login(account: _, pwd: _):
+			return ""
+		case .mainData(language:_ ,token: _,customcode: _):
+			return "StoreCate/requestStoreCate1FavList"
 		}
 		
 	}
@@ -41,40 +39,41 @@ extension MoyaManager:TargetType{
 	var headers: [String: String]? {
 		return nil;
 	}
-	//请求的参数
-	var parameters: [String: Any]? {
+ 	var parameters: [String: Any]? {
 		switch self {
-		case .login(username: let userName, password: let pwd):
-			return ["account":userName,"pwd":pwd ];
-			
+		case .login(account: let account, pwd: let pwd):
+			return ["account":account,"pwd":pwd ]
+		case .mainData(language:_,token:_,customcode: _):
+			return ["lang_type":"chn","token":"","custom_code":""]
 		}
 		
 	}
 	
-	///请求方式
-	var method: Moya.Method {
+ 	var method: Moya.Method {
 		switch self {
-		case .login(username: _, password: _):
-			return .post;
-			
+		case .login(account: _, pwd: _):
+			return .get;
+		default:
+			return .post
 		}
 	}
 	
-	/// The method used for parameter encoding.
-	var parameterEncoding: ParameterEncoding {
+ 	var parameterEncoding: ParameterEncoding {
 		return URLEncoding.default
 	}
 	
-	/// Provides stub data for use in testing.
-	var sampleData: Data {
+ 	var sampleData: Data {
 		return "".data(using: String.Encoding.utf8)!
 	}
 	
-	//MARK:task type
-	var task: Task {
-		
-		return .requestPlain
-	}
+ 	var task: Task {
+		switch self {
+		case .login(let account, let pwd):
+			return .requestParameters(parameters: ["account":account,"pwd":pwd ], encoding: URLEncoding.default)
+		case .mainData(let language,let token,let customcode):
+			return .requestParameters(parameters: ["lang_type":language,"token":token,"custom_code":customcode], encoding: URLEncoding.default)
+		}
+ 	}
 	
 	var validate: Bool {
 		return false
@@ -82,6 +81,4 @@ extension MoyaManager:TargetType{
 	}
 
 }
-
-
 

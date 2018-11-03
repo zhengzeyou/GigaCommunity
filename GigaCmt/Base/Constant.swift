@@ -8,6 +8,7 @@
 
 import UIKit
 import RxSwift
+ 
 
 struct Constant {
 	
@@ -19,6 +20,8 @@ struct Constant {
  	static let vcBgColor:UIColor = UIColor.colorFromHex(hex: 0xfffffe)
 	static let blueColor:UIColor = UIColor.colorFromHex(hex: 0x113981)
 	static let greenColor:UIColor = UIColor.colorFromHex(hex: 0x479f2f)
+
+	static let mallBaseUrl:String = "http://mall.gigawon.co.kr:8800/api/"
 
 }
  

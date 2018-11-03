@@ -12,9 +12,11 @@ class CMForumDetailedController: BaseController {
 	var tableview:UITableView?
 	var datadic:NSDictionary = [:]
 	var input:CMMypageInputView?
+	var dataMutableArray:NSMutableArray?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+		self.dataMutableArray = ["","",""]
  	}
 	
 	override func viewWillAppear(_ animated: Bool) {
@@ -59,9 +61,9 @@ class CMForumDetailedController: BaseController {
 				
 			}else {
 				
-//				self.dataMutableArray.add(content)
-//				self.tableview?.reloadData()
-//				self.tableview?.scrollToRow(at: IndexPath(row:self.dataMutableArray.count - 1, section: 0), at: .bottom, animated: true)
+				self.dataMutableArray?.add(content)
+				self.tableview?.reloadSections(NSIndexSet(index: 1) as IndexSet, with: .automatic)
+//				self.tableview?.scrollToRow(at: IndexPath(row:(self.dataMutableArray?.count ?? 0) - 1, section: 0), at: .bottom, animated: true)
 				
 			}
 			
@@ -86,7 +88,7 @@ extension CMForumDetailedController:UITableViewDelegate,UITableViewDataSource{
 	}
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		
-		return section == 0 ? 1 : 3
+		return section == 0 ? 1 : (self.dataMutableArray?.count ?? 0)
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

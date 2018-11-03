@@ -11,7 +11,7 @@ import UIKit
 class CMMypageAddressListButtomColCell: UICollectionViewCell {
 	var tableview:UITableView?
 	var dataSources:NSMutableArray?
-	var isSelecteds:NSMutableArray = [Bool]() as! NSMutableArray
+	var isSelecteds:NSMutableArray = NSMutableArray()
 
 	override init(frame: CGRect) {
 		super.init(frame: frame)

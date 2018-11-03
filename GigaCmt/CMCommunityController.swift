@@ -18,7 +18,12 @@ class CMCommunityController: BaseController {
         super.viewDidLoad()
  		headView()
 		CmScrollView()
-		
+		MoyaRequest().requestMainData { (favdata:[favShopModel],data:[favShopModel] ) in
+			
+			print(favdata.count)
+			print(data.count)
+
+		}
      }
 
 	
