@@ -9,18 +9,22 @@
 import UIKit
 import Moya
 import RxSwift
-  public typealias JSONDictionary = [String: Any]
+import HandyJSON
 
-enum MoyaManager {
+
+enum MoyaTargetType {
 	
-	case login(account:String,pwd:String)
 	case mainData(language:String,token:String,customcode:String)
 	
 }
 
-//实现moya的TargetType协议
-extension MoyaManager:TargetType{
+struct MoyaParamter {
 	
+}
+
+//实现moya的TargetType协议
+extension MoyaTargetType:TargetType{
+
 	var baseURL: URL {
 		return URL(string: Constant.mallBaseUrl)!
 	}
@@ -28,8 +32,6 @@ extension MoyaManager:TargetType{
  	var path:String{
 		
 		switch self {
-		case .login(account: _, pwd: _):
-			return ""
 		case .mainData(language:_ ,token: _,customcode: _):
 			return "StoreCate/requestStoreCate1FavList"
 		}
@@ -41,19 +43,15 @@ extension MoyaManager:TargetType{
 	}
  	var parameters: [String: Any]? {
 		switch self {
-		case .login(account: let account, pwd: let pwd):
-			return ["account":account,"pwd":pwd ]
-		case .mainData(language:_,token:_,customcode: _):
-			return ["lang_type":"chn","token":"","custom_code":""]
+		case .mainData(language: let languageValue,token:let tokenValue,customcode: let customCodeValue):
+			return ["lang_type":languageValue,"token":tokenValue,"custom_code":customCodeValue]
 		}
 		
 	}
 	
  	var method: Moya.Method {
 		switch self {
-		case .login(account: _, pwd: _):
-			return .get;
-		default:
+		case .mainData(language:_ ,token: _,customcode: _):
 			return .post
 		}
 	}
@@ -68,17 +66,17 @@ extension MoyaManager:TargetType{
 	
  	var task: Task {
 		switch self {
-		case .login(let account, let pwd):
-			return .requestParameters(parameters: ["account":account,"pwd":pwd ], encoding: URLEncoding.default)
-		case .mainData(let language,let token,let customcode):
+ 		case .mainData(let language,let token,let customcode):
 			return .requestParameters(parameters: ["lang_type":language,"token":token,"custom_code":customcode], encoding: URLEncoding.default)
 		}
  	}
-	
+
 	var validate: Bool {
 		return false
 
 	}
+	
+	
 
 }
 

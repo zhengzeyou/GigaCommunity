@@ -18,12 +18,12 @@ class CMCommunityController: BaseController {
         super.viewDidLoad()
  		headView()
 		CmScrollView()
-		MoyaRequest().requestMainData { (favdata:[favShopModel],data:[favShopModel] ) in
-			
-			print(favdata.count)
-			print(data.count)
+		MoyaRequest().requestData(type: .mainData(language: "chn", token: "", customcode: ""), failerror: nil) { (model:mainModel) in
+			print(model.dataFav?.toJSON())
 
 		}
+
+
      }
 
 	

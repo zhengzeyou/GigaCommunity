@@ -33,21 +33,26 @@ struct mainModel:HandyJSON{
 
 class MoyaRequest {
 
-    var	provider = MoyaProvider<MoyaManager>()
-
-	func requestMainData(completion:@escaping ([favShopModel],[favShopModel]) -> Void){
- 
-		provider.rx.request(.mainData(language: "chn",token:"",customcode:"")).subscribe(onSuccess: { response in
-			
-			let str = String(data: response.data, encoding: String.Encoding.utf8)
- 			if let mainmodel = JSONDeserializer<mainModel>.deserializeFrom(json: str){
-				completion(mainmodel.dataFav!,mainmodel.data!)
-			}
-		},onError: { error in
-			print("数据请求失败!错误原因：", error)
-
-		}).disposed(by:Constant.dispose)
+	static let dispose = DisposeBag()
+	func requestData<M:HandyJSON>(type:MoyaTargetType,failerror:((Error)->Void)?, completion:@escaping (_:M) -> Void ){
+		var	provider = MoyaProvider<MoyaTargetType>()
+		DispatchQueue.global().async {
+			provider.rx.request(type).subscribe(onSuccess: { response in
+				
+				let jsonString = String(data: response.data, encoding: String.Encoding.utf8)
+				if let model = JSONDeserializer<M>.deserializeFrom(json: jsonString){
+					DispatchQueue.main.async {
+						completion(model)
+ 					}
+					
+				} },onError: { error in
+					
+					failerror!(error)
+					
+			}).disposed(by:MoyaRequest.dispose)
+		}
 
 
 	}
+	
 }

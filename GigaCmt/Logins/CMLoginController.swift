@@ -44,16 +44,6 @@ class CMLoginController: BaseController {
         super.viewDidLoad()
 		addSubViews()
 
- 		let provider = MoyaProvider<MoyaManager>();
-		provider.rx.request(.login(account: "15627563290", pwd: "123455"))
-			.subscribe(onSuccess: { response in
-				//数据处理
-				let str = String(data: response.data, encoding: String.Encoding.utf8)
-				print("返回的数据是：", str ?? "")
-			},onError: { error in
-				print("数据请求失败!错误原因：", error)
-			}).disposed(by:Constant.dispose)
-		
 		
 	}
 	

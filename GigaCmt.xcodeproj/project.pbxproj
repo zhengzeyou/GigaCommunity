@@ -25,7 +25,7 @@
 		D54D3CDD21427383001F6FD6 /* CMMyPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54D3CDC21427383001F6FD6 /* CMMyPageController.swift */; };
 		D54D3CE021427A2C001F6FD6 /* CMLoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54D3CDF21427A2C001F6FD6 /* CMLoginController.swift */; };
 		D54D3CE22143617B001F6FD6 /* CMAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54D3CE12143617B001F6FD6 /* CMAccount.swift */; };
-		D54D3CE521437114001F6FD6 /* MoyaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54D3CE421437114001F6FD6 /* MoyaManager.swift */; };
+		D54D3CE521437114001F6FD6 /* MoyaTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54D3CE421437114001F6FD6 /* MoyaTargetType.swift */; };
 		D54D3CE72143ADFD001F6FD6 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54D3CE62143ADFD001F6FD6 /* Constant.swift */; };
 		D54D3CF02143C147001F6FD6 /* CMToolExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54D3CEF2143C147001F6FD6 /* CMToolExtension.swift */; };
 		D54D3CF22143C1BD001F6FD6 /* ToModelExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54D3CF12143C1BD001F6FD6 /* ToModelExtensions.swift */; };
@@ -119,7 +119,7 @@
 		D54D3CDC21427383001F6FD6 /* CMMyPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMMyPageController.swift; sourceTree = "<group>"; };
 		D54D3CDF21427A2C001F6FD6 /* CMLoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMLoginController.swift; sourceTree = "<group>"; };
 		D54D3CE12143617B001F6FD6 /* CMAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMAccount.swift; sourceTree = "<group>"; };
-		D54D3CE421437114001F6FD6 /* MoyaManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaManager.swift; sourceTree = "<group>"; };
+		D54D3CE421437114001F6FD6 /* MoyaTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaTargetType.swift; sourceTree = "<group>"; };
 		D54D3CE62143ADFD001F6FD6 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		D54D3CEF2143C147001F6FD6 /* CMToolExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMToolExtension.swift; sourceTree = "<group>"; };
 		D54D3CF12143C1BD001F6FD6 /* ToModelExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToModelExtensions.swift; sourceTree = "<group>"; };
@@ -321,7 +321,7 @@
 			isa = PBXGroup;
 			children = (
 				D54D3CF12143C1BD001F6FD6 /* ToModelExtensions.swift */,
-				D54D3CE421437114001F6FD6 /* MoyaManager.swift */,
+				D54D3CE421437114001F6FD6 /* MoyaTargetType.swift */,
 				D5A1826621894E2C000E3AEE /* MoyaRequest.swift */,
 			);
 			path = NetWork;
@@ -767,7 +767,7 @@
 				D5A1826721894E2C000E3AEE /* MoyaRequest.swift in Sources */,
 				D5637F13216B25DE0003C79A /* CMForumTableCell.swift in Sources */,
 				D5C9CED22148B6320028D40E /* CMReferRoomNewFileView.swift in Sources */,
-				D54D3CE521437114001F6FD6 /* MoyaManager.swift in Sources */,
+				D54D3CE521437114001F6FD6 /* MoyaTargetType.swift in Sources */,
 				D54D3CD321427264001F6FD6 /* BaseController.swift in Sources */,
 				D5C9CF0A214CDB570028D40E /* CMMypageMainTableCell.swift in Sources */,
 				D54D3CF22143C1BD001F6FD6 /* ToModelExtensions.swift in Sources */,
