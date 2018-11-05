@@ -33,7 +33,7 @@
 		D5637F13216B25DE0003C79A /* CMForumTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5637F12216B25DE0003C79A /* CMForumTableCell.swift */; };
 		D5637F15216B42AF0003C79A /* CMForumDetailedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5637F14216B42AF0003C79A /* CMForumDetailedController.swift */; };
 		D5637F17216B484F0003C79A /* CMForumCommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5637F16216B484F0003C79A /* CMForumCommentTableViewCell.swift */; };
-		D5A1826721894E2C000E3AEE /* MoyaRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A1826621894E2C000E3AEE /* MoyaRequest.swift */; };
+		D5A1826721894E2C000E3AEE /* MoyaRequestResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A1826621894E2C000E3AEE /* MoyaRequestResource.swift */; };
 		D5B2CA532165F8A800B49CE9 /* CMMypageInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B2CA522165F8A800B49CE9 /* CMMypageInputView.swift */; };
 		D5B2CA552166F39B00B49CE9 /* CMMypageCommentRestViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B2CA542166F39B00B49CE9 /* CMMypageCommentRestViewCell.swift */; };
 		D5C9CEB62146170B0028D40E /* CMTopSegView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C9CEB52146170B0028D40E /* CMTopSegView.swift */; };
@@ -127,7 +127,7 @@
 		D5637F12216B25DE0003C79A /* CMForumTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMForumTableCell.swift; sourceTree = "<group>"; };
 		D5637F14216B42AF0003C79A /* CMForumDetailedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMForumDetailedController.swift; sourceTree = "<group>"; };
 		D5637F16216B484F0003C79A /* CMForumCommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMForumCommentTableViewCell.swift; sourceTree = "<group>"; };
-		D5A1826621894E2C000E3AEE /* MoyaRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaRequest.swift; sourceTree = "<group>"; };
+		D5A1826621894E2C000E3AEE /* MoyaRequestResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaRequestResource.swift; sourceTree = "<group>"; };
 		D5B2CA522165F8A800B49CE9 /* CMMypageInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMMypageInputView.swift; sourceTree = "<group>"; };
 		D5B2CA542166F39B00B49CE9 /* CMMypageCommentRestViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMMypageCommentRestViewCell.swift; sourceTree = "<group>"; };
 		D5C9CEB52146170B0028D40E /* CMTopSegView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMTopSegView.swift; sourceTree = "<group>"; };
@@ -322,7 +322,7 @@
 			children = (
 				D54D3CF12143C1BD001F6FD6 /* ToModelExtensions.swift */,
 				D54D3CE421437114001F6FD6 /* MoyaTargetType.swift */,
-				D5A1826621894E2C000E3AEE /* MoyaRequest.swift */,
+				D5A1826621894E2C000E3AEE /* MoyaRequestResource.swift */,
 			);
 			path = NetWork;
 			sourceTree = "<group>";
@@ -764,7 +764,7 @@
 				D5637F11216AEFF60003C79A /* CMForumMainColCell.swift in Sources */,
 				D5C9CF2221509EFB0028D40E /* CMMypageAddListButtomSectionTableCell.swift in Sources */,
 				D5637F15216B42AF0003C79A /* CMForumDetailedController.swift in Sources */,
-				D5A1826721894E2C000E3AEE /* MoyaRequest.swift in Sources */,
+				D5A1826721894E2C000E3AEE /* MoyaRequestResource.swift in Sources */,
 				D5637F13216B25DE0003C79A /* CMForumTableCell.swift in Sources */,
 				D5C9CED22148B6320028D40E /* CMReferRoomNewFileView.swift in Sources */,
 				D54D3CE521437114001F6FD6 /* MoyaTargetType.swift in Sources */,

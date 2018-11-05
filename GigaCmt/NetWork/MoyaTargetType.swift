@@ -12,71 +12,51 @@ import RxSwift
 import HandyJSON
 
 
-enum MoyaTargetType {
-	
-	case mainData(language:String,token:String,customcode:String)
-	
-}
-
-struct MoyaParamter {
-	
-}
-
 //实现moya的TargetType协议
-extension MoyaTargetType:TargetType{
-
-	var baseURL: URL {
-		return URL(string: Constant.mallBaseUrl)!
-	}
+struct MoyaTargetType:TargetType{
 	
- 	var path:String{
-		
-		switch self {
-		case .mainData(language:_ ,token: _,customcode: _):
-			return "StoreCate/requestStoreCate1FavList"
+	var baseURL: URL = URL(string: "http://mall.gigawon.co.kr:8800/api/")!
+	
+	var path: String
+
+ 	var method: Moya.Method = .post
+	
+	var sampleData: Data = Data()
+	
+	var task: Task
+	
+	var headers: [String : String]? = nil
+	
+	init(paramter:[String:Any],base:MoyaBaseUriEnum,path:MoyaPathEnum) {
+		self.task = .requestParameters(parameters: paramter, encoding: URLEncoding.default)
+		self.baseURL = base.baseUri
+		self.path = path.pathUri
+	}
+
+ 	func requestData<M:HandyJSON>(failerror:((Error)->Void)?, completion:@escaping (_:M) -> Void ){
+		var	provider = MoyaProvider<MoyaTargetType>()
+		DispatchQueue.global().async {
+			provider.rx.request(self).subscribe(onSuccess: { response in
+				
+				guard let jsonString = String(data: response.data, encoding: String.Encoding.utf8) else {
+					return
+				}
+				if let model = JSONDeserializer<M>.deserializeFrom(json: jsonString){
+					DispatchQueue.main.async {
+						completion(model)
+					}
+					
+				} },onError: { error in
+					
+					failerror!(error)
+					
+			}).disposed(by:Constant.dispose)
 		}
 		
-	}
-	
-	var headers: [String: String]? {
-		return nil;
-	}
- 	var parameters: [String: Any]? {
-		switch self {
-		case .mainData(language: let languageValue,token:let tokenValue,customcode: let customCodeValue):
-			return ["lang_type":languageValue,"token":tokenValue,"custom_code":customCodeValue]
-		}
 		
 	}
 	
- 	var method: Moya.Method {
-		switch self {
-		case .mainData(language:_ ,token: _,customcode: _):
-			return .post
-		}
-	}
-	
- 	var parameterEncoding: ParameterEncoding {
-		return URLEncoding.default
-	}
-	
- 	var sampleData: Data {
-		return "".data(using: String.Encoding.utf8)!
-	}
-	
- 	var task: Task {
-		switch self {
- 		case .mainData(let language,let token,let customcode):
-			return .requestParameters(parameters: ["lang_type":language,"token":token,"custom_code":customcode], encoding: URLEncoding.default)
-		}
- 	}
-
-	var validate: Bool {
-		return false
-
-	}
 	
 	
-
 }
 
