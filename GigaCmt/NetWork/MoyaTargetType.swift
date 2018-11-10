@@ -15,11 +15,11 @@ import HandyJSON
 //实现moya的TargetType协议
 struct MoyaTargetType:TargetType{
 	
-	var baseURL: URL = URL(string: "http://mall.gigawon.co.kr:8800/api/")!
+	var baseURL: URL
 	
 	var path: String
 
- 	var method: Moya.Method = .post
+ 	var method: Moya.Method
 	
 	var sampleData: Data = Data()
 	
@@ -27,10 +27,11 @@ struct MoyaTargetType:TargetType{
 	
 	var headers: [String : String]? = nil
 	
-	init(paramter:[String:Any],base:MoyaBaseUriEnum,path:MoyaPathEnum) {
-		self.task = .requestParameters(parameters: paramter, encoding: URLEncoding.default)
+	init(paramter:[String:Any]?,method:Moya.Method,base:MoyaBaseUriEnum,path:MoyaPathEnum) {
+		self.task = .requestParameters(parameters: paramter!, encoding: URLEncoding.default)
 		self.baseURL = base.baseUri
 		self.path = path.pathUri
+		self.method = method
 	}
 
  	func requestData<M:HandyJSON>(failerror:((Error)->Void)?, completion:@escaping (_:M) -> Void ){

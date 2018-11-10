@@ -20,7 +20,7 @@ class CMCommunityController: BaseController {
 		CmScrollView()
 	
 		let params:[String:Any] = ["language": "chn", "token": "", "customcode": ""]
-		let target = MoyaTargetType(paramter:params, base:.mainUri, path:.mainUri)
+		let target = MoyaTargetType(paramter:params ,method:.post, base:.mainUri, path:.mainUri)
 		target.requestData(failerror: nil) { (model:mainModel) in
 			guard model.status == "1" else{
 				return
